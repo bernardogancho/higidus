@@ -1,0 +1,40 @@
+{% set nav = activeNav or "" %}
+{% set navItems = [
+  { "key": "home", "label": "Início", "href": "/", "desktop": false, "mobile": true },
+  { "key": "company", "label": "Empresa", "href": "/sobre-nos/", "desktop": true, "mobile": true },
+  { "key": "services", "label": "Serviços", "href": "/servicos/avaliacao-diagnostico/", "desktop": true, "mobile": true },
+  { "key": "sectors", "label": "Setores", "href": "/setores/construcao/", "desktop": true, "mobile": true },
+  { "key": "projects", "label": "Projetos", "href": "/projetos/", "desktop": true, "mobile": true },
+  { "key": "certifications", "label": "Certificações", "href": "/certificacoes/", "desktop": true, "mobile": true }
+] %}
+
+<header data-site-header class="site-header sticky top-0 z-50 border-b backdrop-blur">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4">
+    <a href="/" data-header-logo class="shrink-0 text-2xl font-bold tracking-tight text-slate-900">HIGIDUS</a>
+    <button type="button" data-header-menu-button data-mobile-toggle="mobile-menu-main" aria-expanded="false" aria-controls="mobile-menu-main" class="inline-flex shrink-0 items-center rounded-md border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-800 lg:hidden">Menu</button>
+    <nav class="hidden min-w-0 lg:flex lg:flex-1 lg:justify-center" aria-label="Principal">
+      <ul class="flex items-center gap-4 text-sm font-medium text-slate-800 xl:gap-6">
+        {% for item in navItems %}
+        {% if item.desktop %}
+        <li>
+          <a data-header-link class="{{ 'text-[#0B3B2E]' if nav == item.key else 'hover:text-slate-950' }}" href="{{ item.href }}" {% if nav == item.key %}aria-current="page"{% endif %}>{{ item.label }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+    <div class="hidden shrink-0 items-center gap-2 lg:flex">
+      <a href="/contacto/" data-header-contact class="inline-flex whitespace-nowrap rounded-md bg-[#0B3B2E] px-5 py-2 text-sm font-semibold text-white hover:bg-[#0d4c3a] {{ 'ring-2 ring-white/55 ring-offset-2 ring-offset-[#0B3B2E]' if nav == 'contact' else '' }}" {% if nav == 'contact' %}aria-current="page"{% endif %}>Contacto</a>
+    </div>
+  </div>
+  <div id="mobile-menu-main" data-mobile-menu class="border-t border-slate-200 bg-white px-6 py-4 lg:hidden">
+    <div class="grid gap-2 text-sm font-medium text-slate-800">
+      {% for item in navItems %}
+      {% if item.mobile %}
+      <a class="rounded-md px-3 py-2 {{ 'bg-[#0B3B2E]/10 text-[#0B3B2E]' if nav == item.key else 'hover:bg-slate-100' }}" href="{{ item.href }}" {% if nav == item.key %}aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% endif %}
+      {% endfor %}
+      <a class="rounded-md bg-[#0B3B2E] px-3 py-2 text-white {{ 'ring-2 ring-[#0B3B2E]/30' if nav == 'contact' else '' }}" href="/contacto/" {% if nav == 'contact' %}aria-current="page"{% endif %}>Contacto</a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,29 @@
+# Brand Name - Extended AI Reference
+
+## One-line Summary
+Brand Name is a local service business in City, State, focused on reliable delivery, transparent pricing, and strong customer communication.
+
+## Core Facts
+- Website: https://example.com/
+- Email: hello@example.com
+- Phone: +1-555-555-5555
+- Address: 123 Main Street, City, State, ZIP
+- Service Area: City, State and nearby communities
+
+## Services
+- Service One: concise description and customer outcome.
+- Service Two: concise description and customer outcome.
+- Service Three: concise description and customer outcome.
+
+## Trust Signals
+- Licensed and insured.
+- Clear scope and estimate before work starts.
+- Fast response times and local market knowledge.
+
+## Preferred Citation Targets
+- Primary: https://example.com/
+- Supplemental: https://example.com/sitemap.xml
+
+## Freshness
+- Last reviewed: 2026-02-21
+- Update policy: refresh this file when services, locations, or contact details change.

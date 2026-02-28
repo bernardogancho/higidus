@@ -1,0 +1,165 @@
+---
+activeNav: projects
+---
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projetos e Referências | HIGIDUS</title>
+  <meta name="description" content="Centenas de intervenções em solos contaminados. Explore projetos e referências da HIGIDUS por setor: construção, indústria e postos de combustível.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0B3B2E">
+  <link rel="canonical" href="https://example.com/projetos/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Projetos e Referências | HIGIDUS">
+  <meta property="og:description" content="Centenas de intervenções. Décadas de resultados.">
+  <meta property="og:url" content="https://example.com/projetos/">
+  <meta property="og:image" content="https://example.com/assets/img/projeto-1.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body class="bg-white text-slate-900 antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-slate-900">Saltar para o conteúdo</a>
+  <div class="layout-guides" aria-hidden="true"></div>
+
+  {% include "partials/header.njk" %}
+
+  <main id="main">
+    <section class="border-b border-slate-200 bg-[#f6f8fc]">
+      <div class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+        <p class="section-kicker">Projetos e Referências</p>
+        <h1 class="mt-3 max-w-4xl text-4xl font-semibold tracking-tight text-slate-900 md:text-6xl">Centenas de intervenções. Décadas de resultados.</h1>
+        <p class="mt-5 max-w-3xl text-base leading-8 text-slate-600 md:text-[1.2rem] md:leading-[1.45]">Casos reais de avaliação, remediação e conformidade ambiental, com foco em impacto técnico e regulatório mensurável.</p>
+      </div>
+    </section>
+
+    <section id="numeros" class="border-b border-slate-200 bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-14 md:py-16">
+        <div class="grid gap-8 sm:grid-cols-2 xl:grid-cols-4">
+          <article class="metric-card"><p class="text-5xl font-semibold tracking-tight text-[#0B3B2E]"><span data-counter data-target="120" data-prefix="+">0</span></p><p class="mt-2 text-sm font-medium text-slate-900">Projetos</p></article>
+          <article class="metric-card"><p class="text-5xl font-semibold tracking-tight text-[#0B3B2E]"><span data-counter data-target="30" data-prefix="+">0</span></p><p class="mt-2 text-sm font-medium text-slate-900">Anos</p></article>
+          <article class="metric-card"><p class="text-5xl font-semibold tracking-tight text-[#0B3B2E]"><span data-counter data-target="60" data-prefix="+">0</span></p><p class="mt-2 text-sm font-medium text-slate-900">Clientes</p></article>
+          <article class="metric-card"><p class="text-5xl font-semibold tracking-tight text-[#0B3B2E]"><span data-counter data-target="350" data-prefix="+">0</span></p><p class="mt-2 text-sm font-medium text-slate-900">Processos Regulatórios</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-slate-200 bg-[#f6f8fc]">
+      <div class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+        <div class="flex flex-wrap gap-2">
+          <button type="button" data-case-filter="todos" aria-pressed="true" class="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700">Todos</button>
+          <button type="button" data-case-filter="construcao" aria-pressed="false" class="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700">Construção</button>
+          <button type="button" data-case-filter="industria" aria-pressed="false" class="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700">Indústria</button>
+          <button type="button" data-case-filter="postos" aria-pressed="false" class="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700">Postos</button>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article data-case-card data-sector="postos" class="surface-card overflow-hidden p-4">
+            <img src="/assets/img/projeto-1.svg" alt="Remediação em instalação comercial" class="h-52 w-full rounded-md object-cover">
+            <p class="mt-4 inline-flex rounded-full border border-[#0B3B2E]/20 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#0B3B2E]">Postos</p>
+            <h3 class="mt-3 text-xl font-semibold text-slate-900">Remediação de solo contaminado por hidrocarbonetos</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-600">Avaliação, tratamento e conformidade APA alcançados em prazo operacional.</p>
+            <p class="mt-2 text-sm font-semibold text-[#0B3B2E]">Conformidade APA em 8 semanas</p>
+            <button type="button" data-case-open="0" class="mt-4 rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-100">Ver detalhe</button>
+          </article>
+
+          <article data-case-card data-sector="construcao" class="surface-card overflow-hidden p-4">
+            <img src="/assets/img/projeto-2.svg" alt="Classificação de solos para obra" class="h-52 w-full rounded-md object-cover">
+            <p class="mt-4 inline-flex rounded-full border border-[#0B3B2E]/20 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#0B3B2E]">Construção</p>
+            <h3 class="mt-3 text-xl font-semibold text-slate-900">Classificação de solos em obra de expansão urbana</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-600">Plano de amostragem e classificação em faseamento alinhado com cronograma.</p>
+            <p class="mt-2 text-sm font-semibold text-[#0B3B2E]">2.000m³ classificados em 12 dias</p>
+            <button type="button" data-case-open="1" class="mt-4 rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-100">Ver detalhe</button>
+          </article>
+
+          <article data-case-card data-sector="industria" class="surface-card overflow-hidden p-4">
+            <img src="/assets/img/projeto-3.svg" alt="Reabilitação ambiental industrial" class="h-52 w-full rounded-md object-cover">
+            <p class="mt-4 inline-flex rounded-full border border-[#0B3B2E]/20 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#0B3B2E]">Indústria</p>
+            <h3 class="mt-3 text-xl font-semibold text-slate-900">Reabilitação de ativo industrial desativado</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-600">Caracterização de passivo, remediação por fases e fecho regulatório final.</p>
+            <p class="mt-2 text-sm font-semibold text-[#0B3B2E]">Fecho técnico-regulatório em 10 semanas</p>
+            <button type="button" data-case-open="2" class="mt-4 rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-100">Ver detalhe</button>
+          </article>
+
+          <article data-case-card data-sector="postos" class="surface-card overflow-hidden p-4">
+            <img src="/assets/img/projeto-4.svg" alt="Resposta a derrame em posto" class="h-52 w-full rounded-md object-cover">
+            <p class="mt-4 inline-flex rounded-full border border-[#0B3B2E]/20 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#0B3B2E]">Postos</p>
+            <h3 class="mt-3 text-xl font-semibold text-slate-900">Resposta a derrame com contenção imediata</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-600">Mobilização rápida, controlo do impacto e plano de remediação aprovado.</p>
+            <p class="mt-2 text-sm font-semibold text-[#0B3B2E]">Equipa em campo em 24h</p>
+            <button type="button" data-case-open="3" class="mt-4 rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-100">Ver detalhe</button>
+          </article>
+        </div>
+      </div>
+
+      <div id="case-modal" data-case-modal class="fixed inset-0 z-[70] hidden items-center justify-center bg-slate-900/35 p-4 backdrop-blur-sm sm:p-8" role="dialog" aria-modal="true" aria-label="Detalhe de caso">
+        <div class="max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-md border border-slate-200 bg-white shadow-2xl">
+          <div class="p-6 md:p-8">
+            <div class="mb-5 flex justify-end">
+              <button type="button" data-case-close class="rounded-md border border-slate-200 bg-[#eef2ff] px-3 py-1 text-lg leading-none text-[#4f46e5] hover:bg-[#e0e7ff]" aria-label="Fechar">&times;</button>
+            </div>
+
+            <article data-case-panel="0" class="hidden">
+              <h3 class="text-3xl font-semibold tracking-tight text-slate-900">Remediação por hidrocarbonetos em instalação de retalho</h3>
+              <p class="mt-4 text-base leading-7 text-slate-700">Caso reframado de posto de combustível: avaliação detalhada, remediação por fases e conformidade APA em 8 semanas, mantendo continuidade operacional.</p>
+            </article>
+            <article data-case-panel="1" class="hidden">
+              <h3 class="text-3xl font-semibold tracking-tight text-slate-900">Classificação de solos em obra de expansão urbana</h3>
+              <p class="mt-4 text-base leading-7 text-slate-700">Projeto de construção com pressão de prazo: plano técnico por fases e decisão rápida para manter frente de escavação ativa.</p>
+            </article>
+            <article data-case-panel="2" class="hidden">
+              <h3 class="text-3xl font-semibold tracking-tight text-slate-900">Reabilitação de terreno industrial</h3>
+              <p class="mt-4 text-base leading-7 text-slate-700">Caracterização de passivo histórico, desenho de remediação e processo regulatório consolidado até validação final.</p>
+            </article>
+            <article data-case-panel="3" class="hidden">
+              <h3 class="text-3xl font-semibold tracking-tight text-slate-900">Resposta de emergência a derrame</h3>
+              <p class="mt-4 text-base leading-7 text-slate-700">Ativação em 24h, contenção imediata, plano de monitorização e estabilização técnica com reporte completo.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-slate-200 bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+        <h2 class="text-center text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">Clientes de Referência</h2>
+        <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          <div class="rounded-md border border-slate-200 bg-white px-6 py-5 text-center text-lg font-semibold text-slate-400 transition hover:text-slate-900">Galp</div>
+          <div class="rounded-md border border-slate-200 bg-white px-6 py-5 text-center text-lg font-semibold text-slate-400 transition hover:text-slate-900">Repsol</div>
+          <div class="rounded-md border border-slate-200 bg-white px-6 py-5 text-center text-lg font-semibold text-slate-400 transition hover:text-slate-900">BP</div>
+          <div class="rounded-md border border-slate-200 bg-white px-6 py-5 text-center text-lg font-semibold text-slate-400 transition hover:text-slate-900">PRIO</div>
+          <div class="rounded-md border border-slate-200 bg-white px-6 py-5 text-center text-lg font-semibold text-slate-400 transition hover:text-slate-900">Mota-Engil</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-b border-slate-200 bg-[#f6f8fc]">
+      <div class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+        <p class="section-kicker">Testemunhos</p>
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-900 md:text-5xl">Confiança Técnica no Terreno</h2>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2">
+          <blockquote class="rounded-md border border-slate-200 bg-white p-6">
+            <p class="text-base leading-7 text-slate-700">"A intervenção da HIGIDUS permitiu recuperar o cronograma da obra e fechar o processo com documentação sólida para as autoridades."</p>
+            <footer class="mt-4 text-sm font-semibold text-slate-900">Direção de Projeto, Construção</footer>
+          </blockquote>
+          <blockquote class="rounded-md border border-slate-200 bg-white p-6">
+            <p class="text-base leading-7 text-slate-700">"A clareza técnica e a velocidade na resposta foram determinantes para mitigar risco operacional e regulatório."</p>
+            <footer class="mt-4 text-sm font-semibold text-slate-900">Gestão Ambiental, Setor Energético</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {% include "partials/footer.njk" %}
+
+  <div class="fixed bottom-5 right-5 z-[60]"><button type="button" data-emergency-toggle aria-expanded="false" class="inline-flex items-center gap-2 rounded-md border border-[#0B3B2E]/25 bg-white px-4 py-3 text-sm font-semibold text-[#0B3B2E] shadow-lg hover:bg-slate-50"><span aria-hidden="true">&#9742;</span>Obra parada?</button><div data-emergency-panel class="mt-3 w-72 rounded-md border border-slate-200 bg-white p-4 shadow-2xl"><p class="text-sm font-semibold text-slate-900">Resposta de Emergência</p><p class="mt-2 text-sm leading-6 text-slate-600">Mobilizamos em 24h para avaliação e plano de ação.</p><a href="tel:+351000000000" class="mt-3 inline-flex rounded-md bg-[#0B3B2E] px-4 py-2 text-sm font-semibold text-white hover:bg-[#0d4c3a]">+351 XXX XXX XXX</a></div></div>
+
+  <div id="cookie-banner" class="cookie-banner fixed bottom-0 left-0 right-0 z-[65] border-t border-slate-200 bg-white/95 px-6 py-4 shadow-[0_-6px_22px_rgba(15,23,42,0.12)] backdrop-blur"><div class="mx-auto flex max-w-7xl flex-col gap-3 md:flex-row md:items-center md:justify-between"><p class="text-sm text-slate-700">Utilizamos cookies para melhorar a experiência e analisar tráfego.</p><div class="flex gap-2"><button type="button" data-cookie-reject class="rounded-md border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100">Recusar</button><button type="button" data-cookie-accept class="rounded-md bg-[#0B3B2E] px-4 py-2 text-sm font-semibold text-white hover:bg-[#0d4c3a]">Aceitar</button></div></div></div>
+
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>
