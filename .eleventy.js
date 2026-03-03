@@ -3,6 +3,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("404.html");
 
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/lucide/dist/umd/lucide.min.js": "assets/vendor/lucide.min.js",
+  });
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("sitemap.xml");
   eleventyConfig.addPassthroughCopy("site.webmanifest");

@@ -37,8 +37,6 @@ activeNav: home
   <meta name="geo.placename" content="Lisboa">
   <meta name="geo.position" content="38.7223;-9.1393">
   <meta name="ICBM" content="38.7223, -9.1393">
-
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/styles.css">
 
   <script type="application/ld+json">
@@ -48,12 +46,19 @@ activeNav: home
     "name": "HIGIDUS",
     "url": "https://example.com/",
     "logo": "https://example.com/assets/favicon.svg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "R. das Fisgas 442 Armazém 5",
+      "postalCode": "2649-504",
+      "addressLocality": "Alcabideche",
+      "addressCountry": "PT"
+    },
     "contactPoint": [
       {
         "@type": "ContactPoint",
         "contactType": "customer service",
         "email": "geral@higidus.pt",
-        "telephone": "+351000000000",
+        "telephone": "+351214602288",
         "areaServed": "PT"
       }
     ]
@@ -103,8 +108,8 @@ activeNav: home
             </h1>
             <p class="mt-4 max-w-3xl text-lg leading-relaxed text-emerald-50/90 md:text-2xl">Especialistas em solos contaminados: diagnóstico técnico, execução no terreno e conformidade regulatória</p>
             <div class="mt-8 flex flex-wrap gap-3">
-              <a href="/contacto/?servico=avaliacao" class="rounded-md bg-[#0B3B2E] px-6 py-3 text-base font-semibold text-white hover:bg-[#0d4c3a]">Pedir Avaliação</a>
-              <a href="/sobre-nos/" class="rounded-md border border-white/45 bg-white/10 px-6 py-3 text-base font-semibold text-white hover:bg-white/20">Conhecer a HIGIDUS</a>
+              <a href="/contacto/?servico=avaliacao" class="btn btn-primary btn-md md:text-base">Pedir Avaliação</a>
+              <a href="/sobre-nos/" class="btn btn-outline-light btn-md md:text-base">Conhecer a HIGIDUS</a>
             </div>
           </div>
         </div>
@@ -162,38 +167,46 @@ activeNav: home
             Soluções técnicas completas para diagnosticar, remediar e garantir conformidade ambiental em qualquer fase do seu projeto.
           </p>
           <div class="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-slate-700">
-            <a href="/servicos/avaliacao-diagnostico/" class="hover:text-[#0B3B2E]">Avaliação e Diagnóstico de Solos</a>
-            <a href="/projetos/" class="hover:text-[#0B3B2E]">Projetos e Referências</a>
-            <a href="/certificacoes/" class="hover:text-[#0B3B2E]">Certificações e Acreditações</a>
+            <a href="/projetos/" class="underline underline-offset-4 hover:text-[#0B3B2E]">Projetos e Referências</a>
+            <a href="/certificacoes/" class="underline underline-offset-4 hover:text-[#0B3B2E]">Certificações e Acreditações</a>
           </div>
         </div>
 
         <div id="service-card-grid" class="mt-10 grid gap-6 md:grid-cols-3" role="list">
-          <a href="/servicos/avaliacao-diagnostico/" class="group rounded-md border border-slate-200 bg-[#f8f9fc] p-4 text-left transition hover:border-[#0B3B2E]/60 hover:bg-[#0B3B2E]/5">
+          <a href="/servicos/avaliacao-diagnostico/" class="action-card group">
             <div class="mb-4 flex items-start justify-between gap-3">
               <h3 class="text-xl font-semibold leading-tight text-slate-900">Avaliação e Diagnóstico de Solos</h3>
-              <span class="rounded-md border border-slate-200 bg-white px-2 py-1 text-sm text-[#0B3B2E]">&#8599;</span>
+              <i data-lucide="arrow-up-right" class="action-card-icon" aria-hidden="true"></i>
             </div>
             <p class="mb-4 text-sm leading-6 text-slate-600">Sabemos onde recolher, o que procurar e como interpretar. Planos de amostragem, classificação de solos escavados e análise de risco conforme o Guia Técnico da APA.</p>
-            <img src="/assets/img/service-diagnostico-card.svg" alt="Avaliação técnica de solo em campo" class="h-72 w-full rounded-md object-cover" loading="lazy" decoding="async">
+            <picture class="block">
+              <source srcset="/assets/img/service-diagnostico-card.avif" type="image/avif">
+              <img src="/assets/img/service-diagnostico-card.jpg" alt="Avaliação técnica de solo em campo" class="h-72 w-full rounded-md object-cover" loading="lazy" decoding="async">
+            </picture>
           </a>
 
-          <a href="/servicos/remediacao-tratamento/" class="group rounded-md border border-slate-200 bg-[#f8f9fc] p-4 text-left transition hover:border-[#0B3B2E]/60 hover:bg-[#0B3B2E]/5">
+          <a href="/servicos/remediacao-tratamento/" class="action-card group">
             <div class="mb-4 flex items-start justify-between gap-3">
               <h3 class="text-xl font-semibold leading-tight text-slate-900">Remediação e Tratamento de Solos</h3>
-              <span class="rounded-md border border-slate-200 bg-white px-2 py-1 text-sm text-[#0B3B2E]">&#8599;</span>
+              <i data-lucide="arrow-up-right" class="action-card-icon" aria-hidden="true"></i>
             </div>
             <p class="mb-4 text-sm leading-6 text-slate-600">De hidrocarbonetos a metais pesados, projetamos e executamos soluções de remediação in situ e ex situ. Do diagnóstico à descontaminação total.</p>
-            <img src="/assets/img/projeto-1.svg" alt="Remediação e tratamento de solo contaminado" class="h-72 w-full rounded-md object-cover" loading="lazy" decoding="async">
+            <picture class="block">
+              <source srcset="/assets/img/projeto-1.avif" type="image/avif">
+              <img src="/assets/img/projeto-1.jpg" alt="Remediação e tratamento de solo contaminado" class="h-72 w-full rounded-md object-cover" loading="lazy" decoding="async">
+            </picture>
           </a>
 
-          <a href="/servicos/conformidade-regulacao/" class="group rounded-md border border-slate-200 bg-[#f8f9fc] p-4 text-left transition hover:border-[#0B3B2E]/60 hover:bg-[#0B3B2E]/5">
+          <a href="/servicos/conformidade-regulacao/" class="action-card group">
             <div class="mb-4 flex items-start justify-between gap-3">
               <h3 class="text-xl font-semibold leading-tight text-slate-900">Conformidade e Regulação</h3>
-              <span class="rounded-md border border-slate-200 bg-white px-2 py-1 text-sm text-[#0B3B2E]">&#8599;</span>
+              <i data-lucide="arrow-up-right" class="action-card-icon" aria-hidden="true"></i>
             </div>
             <p class="mb-4 text-sm leading-6 text-slate-600">Navegamos os processos da APA, CCDR e Câmaras Municipais. Licenciamento, AIA, monitorização e toda a documentação regulatória para o seu projeto avançar.</p>
-            <img src="/assets/img/projeto-2.svg" alt="Conformidade e regulação ambiental para obras" class="h-72 w-full rounded-md object-cover" loading="lazy" decoding="async">
+            <picture class="block">
+              <source srcset="/assets/img/projeto-2.avif" type="image/avif">
+              <img src="/assets/img/projeto-2.jpg" alt="Conformidade e regulação ambiental para obras" class="h-72 w-full rounded-md object-cover" loading="lazy" decoding="async">
+            </picture>
           </a>
         </div>
       </div>
@@ -201,19 +214,22 @@ activeNav: home
 
     <section id="diferenciacao" class="border-b border-slate-200 bg-[#f6f8fc]">
       <div class="mx-auto max-w-7xl px-6 py-16 md:py-20">
-        <article class="grid gap-6 rounded-md border border-slate-200 bg-white p-6 md:p-8 lg:grid-cols-2 lg:items-center">
-          <div>
-            <h2 class="text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">O Laboratório é o Instrumento. Nós Somos o Engenheiro.</h2>
-            <p class="mt-5 text-base leading-7 text-slate-700">Qualquer empresa pode enviar amostras a um laboratório. Nós sabemos onde recolher, o que procurar, como interpretar e como resolver.</p>
-            <p class="mt-4 text-base leading-7 text-slate-700">Nascidos de décadas de experiência na gestão dos mais complexos desafios de contaminação em postos de combustível, trazemos expertise comprovada a qualquer setor que lide com terrenos contaminados.</p>
-            <p class="mt-4 text-base leading-7 text-slate-700">Somos como o médico, não como o laboratório de análises. O laboratório é uma ferramenta. A consultoria ambiental é o diagnóstico.</p>
-            <div class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-slate-700">
-              <a href="/sobre-nos/" class="hover:text-[#0B3B2E]">Ler história completa</a>
-              <a href="/certificacoes/" class="hover:text-[#0B3B2E]">Ver certificações</a>
+        <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-7 lg:pr-8">
+            <p class="section-kicker">Sobre Nós</p>
+            <h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-900 md:text-5xl">Experiência técnica construída em campo</h2>
+            <p class="mt-5 max-w-3xl text-sm leading-7 text-slate-700 md:text-base">A HIGIDUS nasceu há mais de 30 anos no setor energético, com foco em conformidade ambiental de postos de combustível. Essa experiência prática é hoje aplicada em construção, indústria e municípios.</p>
+            <p class="mt-3 max-w-3xl text-sm leading-7 text-slate-700 md:text-base">Do diagnóstico à remediação e à componente regulatória, atuamos como parceiro técnico para decisões mais seguras e execução mais rápida.</p>
+            <div class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-medium text-slate-700">
+              <a href="/sobre-nos/" class="btn btn-secondary btn-md">Sobre Nós</a>
+              <a href="/certificacoes/" class="inline-flex min-h-11 items-center underline underline-offset-4 hover:text-[#0B3B2E]">Ver certificações</a>
             </div>
           </div>
-          <img src="/assets/img/history-field.svg" alt="Intervenção de remediação em obra" class="h-64 w-full rounded-md border border-slate-200 object-cover md:h-72" loading="lazy" decoding="async">
-        </article>
+          <picture class="block lg:col-span-5">
+            <source srcset="/assets/img/empresa-teaser.avif" type="image/avif">
+            <img src="/assets/img/empresa-teaser.jpg" alt="Representante da equipa HIGIDUS" class="h-64 w-full rounded-md object-cover shadow-sm md:h-72" loading="lazy" decoding="async">
+          </picture>
+        </div>
       </div>
     </section>
 
@@ -226,38 +242,50 @@ activeNav: home
         </div>
 
         <div class="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-          <a href="/setores/construcao/" class="group overflow-hidden rounded-md border border-slate-200 bg-[#f8f9fc] p-4 text-left transition hover:border-[#0B3B2E]/60 hover:bg-[#0B3B2E]/5">
-            <img src="/assets/img/setor-construcao.svg" alt="Escavação em obra de construção" class="h-64 w-full rounded-md object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async">
+          <a href="/setores/construcao/" class="action-card group overflow-hidden">
+            <picture class="block">
+              <source srcset="/assets/img/setor-construcao.avif" type="image/avif">
+              <img src="/assets/img/setor-construcao.jpg" alt="Escavação em obra de construção" class="h-64 w-full rounded-md object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async">
+            </picture>
             <div class="mt-4 flex items-start justify-between gap-3">
               <h3 class="text-xl font-semibold leading-tight text-slate-900">Construção</h3>
-              <span class="rounded-md border border-slate-200 bg-white px-2 py-1 text-sm text-[#0B3B2E]">&#8599;</span>
+              <i data-lucide="arrow-up-right" class="action-card-icon" aria-hidden="true"></i>
             </div>
             <p class="mt-2 text-sm leading-6 text-slate-600">Cada escavação precisa de classificação. Nós fazemos rápido e bem.</p>
           </a>
 
-          <a href="/setores/industria/" class="group overflow-hidden rounded-md border border-slate-200 bg-[#f8f9fc] p-4 text-left transition hover:border-[#0B3B2E]/60 hover:bg-[#0B3B2E]/5">
-            <img src="/assets/img/setor-industria.svg" alt="Zona industrial para reabilitação ambiental" class="h-64 w-full rounded-md object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async">
+          <a href="/setores/industria/" class="action-card group overflow-hidden">
+            <picture class="block">
+              <source srcset="/assets/img/setor-industria.avif" type="image/avif">
+              <img src="/assets/img/setor-industria.jpg" alt="Zona industrial para reabilitação ambiental" class="h-64 w-full rounded-md object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async">
+            </picture>
             <div class="mt-4 flex items-start justify-between gap-3">
               <h3 class="text-xl font-semibold leading-tight text-slate-900">Indústria</h3>
-              <span class="rounded-md border border-slate-200 bg-white px-2 py-1 text-sm text-[#0B3B2E]">&#8599;</span>
+              <i data-lucide="arrow-up-right" class="action-card-icon" aria-hidden="true"></i>
             </div>
             <p class="mt-2 text-sm leading-6 text-slate-600">Descomissionamento e reabilitação de terrenos industriais.</p>
           </a>
 
-          <a href="/setores/postos-de-combustivel/" class="group overflow-hidden rounded-md border border-slate-200 bg-[#f8f9fc] p-4 text-left transition hover:border-[#0B3B2E]/60 hover:bg-[#0B3B2E]/5">
-            <img src="/assets/img/setor-postos.svg" alt="Posto de combustível com tanques subterrâneos" class="h-64 w-full rounded-md object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async">
+          <a href="/setores/postos-de-combustivel/" class="action-card group overflow-hidden">
+            <picture class="block">
+              <source srcset="/assets/img/setor-postos.avif" type="image/avif">
+              <img src="/assets/img/setor-postos.jpg" alt="Posto de combustível com tanques subterrâneos" class="h-64 w-full rounded-md object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async">
+            </picture>
             <div class="mt-4 flex items-start justify-between gap-3">
               <h3 class="text-xl font-semibold leading-tight text-slate-900">Postos de Combustível</h3>
-              <span class="rounded-md border border-slate-200 bg-white px-2 py-1 text-sm text-[#0B3B2E]">&#8599;</span>
+              <i data-lucide="arrow-up-right" class="action-card-icon" aria-hidden="true"></i>
             </div>
             <p class="mt-2 text-sm leading-6 text-slate-600">Onde nascemos. +30 anos de gestão ambiental.</p>
           </a>
 
-          <a href="/setores/municipal/" class="group overflow-hidden rounded-md border border-slate-200 bg-[#f8f9fc] p-4 text-left transition hover:border-[#0B3B2E]/60 hover:bg-[#0B3B2E]/5">
-            <img src="/assets/img/setor-municipal.svg" alt="Paisagem urbana e planeamento municipal" class="h-64 w-full rounded-md object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async">
+          <a href="/setores/municipal/" class="action-card group overflow-hidden">
+            <picture class="block">
+              <source srcset="/assets/img/setor-municipal.avif" type="image/avif">
+              <img src="/assets/img/setor-municipal.jpg" alt="Paisagem urbana e planeamento municipal" class="h-64 w-full rounded-md object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async">
+            </picture>
             <div class="mt-4 flex items-start justify-between gap-3">
               <h3 class="text-xl font-semibold leading-tight text-slate-900">Municipal</h3>
-              <span class="rounded-md border border-slate-200 bg-white px-2 py-1 text-sm text-[#0B3B2E]">&#8599;</span>
+              <i data-lucide="arrow-up-right" class="action-card-icon" aria-hidden="true"></i>
             </div>
             <p class="mt-2 text-sm leading-6 text-slate-600">Regeneração urbana e avaliação de solos para municípios.</p>
           </a>
@@ -293,7 +321,7 @@ activeNav: home
           </article>
         </div>
         <div class="mt-8 text-center">
-          <a href="/projetos/" class="text-sm font-semibold text-[#0B3B2E] hover:underline">Explorar projetos e métricas detalhadas</a>
+          <a href="/projetos/" class="btn-text">Explorar projetos e métricas detalhadas</a>
         </div>
       </div>
     </section>
@@ -301,7 +329,7 @@ activeNav: home
     <section id="clientes" class="border-b border-slate-200 bg-white">
       <div class="mx-auto max-w-7xl px-6 py-16 md:py-20">
         <h2 class="text-center text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">A Confiança das Maiores Marcas</h2>
-        <p class="mt-3 text-center text-sm text-slate-600">Veja casos completos na página de <a href="/projetos/" class="font-semibold text-[#0B3B2E] hover:underline">Projetos e Referências</a>.</p>
+        <p class="mt-3 text-center text-sm text-slate-600">Veja casos completos na página de <a href="/projetos/" class="btn-text">Projetos e Referências</a>.</p>
         <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6" aria-label="Logótipos de clientes de referência">
           <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/galp.svg" alt="Galp" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
           <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/repsol.svg" alt="Repsol" class="max-h-10 w-auto" loading="lazy" decoding="async"></div>
@@ -333,8 +361,8 @@ activeNav: home
             <h2 class="mt-3 max-w-4xl text-3xl font-semibold tracking-tight md:text-5xl">A sua obra parou por contaminação?</h2>
             <p class="mt-4 max-w-3xl text-base leading-8 text-emerald-50 md:text-[1.2rem] md:leading-[1.45]">Cada dia custa milhares de euros. Mobilizamos em 24h, avaliamos, resolvemos e tratamos da APA.</p>
             <div class="mt-8 flex flex-wrap gap-3">
-              <a href="tel:+351000000000" class="inline-flex items-center rounded-md bg-white px-6 py-3 text-sm font-semibold text-[#0B3B2E] transition hover:bg-emerald-50 md:text-base">Resposta de Emergência: +351 XXX XXX XXX</a>
-              <a href="/contacto/?servico=remediacao" class="inline-flex items-center rounded-md border border-white/55 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20 md:text-base">Pedir Contacto Técnico</a>
+              <a href="tel:+351214602288" class="btn btn-inverse btn-md md:text-base">Resposta de Emergência: +351 214 602 288</a>
+              <a href="/contacto/?servico=remediacao" class="btn btn-outline-light btn-md md:text-base">Pedir Contacto Técnico</a>
             </div>
             <p class="mt-5 text-xs font-medium uppercase tracking-[0.14em] text-emerald-100/95">Mobilização em 24h • Acompanhamento APA • Equipa técnica sénior</p>
           </div>
@@ -360,9 +388,12 @@ activeNav: home
               <li><strong>Abordagem:</strong> avaliação em campo, remediação técnica e dossiê regulatório completo.</li>
               <li><strong>Resultado:</strong> reposição do avanço da obra com conformidade documental.</li>
             </ul>
-            <a href="/projetos/" class="inline-flex items-center gap-2 rounded-md bg-[#0B3B2E] px-5 py-3 text-sm font-semibold text-white hover:bg-[#0d4c3a]">Ver Estudo Completo <span aria-hidden="true">&rarr;</span></a>
+            <a href="/projetos/" class="btn btn-primary btn-md">Ver Estudo Completo <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
           </div>
-          <img src="/assets/img/case-study.svg" alt="Intervenção de remediação em caso real" class="h-72 w-full rounded-md border border-slate-200 object-cover md:h-80" loading="lazy" decoding="async">
+          <picture class="block">
+            <source srcset="/assets/img/case-study.avif" type="image/avif">
+            <img src="/assets/img/case-study.jpg" alt="Intervenção de remediação em caso real" class="h-72 w-full rounded-md border border-slate-200 object-cover md:h-80" loading="lazy" decoding="async">
+          </picture>
         </article>
       </div>
     </section>
@@ -377,8 +408,7 @@ activeNav: home
           <div class="mt-6 rounded-md border border-slate-200 bg-white p-5">
             <p class="text-sm font-semibold text-slate-900">Não encontrou a sua dúvida?</p>
             <p class="mt-2 text-sm leading-6 text-slate-600">Fale com a nossa equipa técnica e receba orientação inicial sem compromisso.</p>
-            <a href="/contacto/" class="mt-4 inline-flex rounded-md bg-[#0B3B2E] px-4 py-2 text-sm font-semibold text-white hover:bg-[#0d4c3a]">Pedir Contacto</a>
-            <a href="/contacto/" class="mt-3 inline-flex text-sm font-semibold text-[#0B3B2E] hover:underline">Abrir página de contacto completa</a>
+            <a href="/contacto/" class="mt-4 btn btn-primary btn-md">Pedir Contacto</a>
           </div>
         </div>
 
@@ -386,7 +416,7 @@ activeNav: home
           <details class="faq-item rounded-md border border-slate-200 bg-white p-5">
             <summary class="flex cursor-pointer list-none items-start justify-between gap-4">
               <span class="text-lg font-semibold text-slate-900">Em quanto tempo conseguem mobilizar equipa para obra?</span>
-              <span class="faq-icon mt-1 text-2xl leading-none text-slate-400">+</span>
+              <i data-lucide="plus" class="faq-icon mt-1 h-5 w-5 text-slate-400" aria-hidden="true"></i>
             </summary>
             <p class="mt-4 border-t border-slate-100 pt-4 text-sm leading-7 text-slate-700">Em contexto crítico, mobilizamos em 24h para avaliação inicial e definição de plano de ação.</p>
           </details>
@@ -394,7 +424,7 @@ activeNav: home
           <details class="faq-item rounded-md border border-slate-200 bg-white p-5">
             <summary class="flex cursor-pointer list-none items-start justify-between gap-4">
               <span class="text-lg font-semibold text-slate-900">Tratam também da parte regulatória e documentação?</span>
-              <span class="faq-icon mt-1 text-2xl leading-none text-slate-400">+</span>
+              <i data-lucide="plus" class="faq-icon mt-1 h-5 w-5 text-slate-400" aria-hidden="true"></i>
             </summary>
             <p class="mt-4 border-t border-slate-100 pt-4 text-sm leading-7 text-slate-700">Sim. Gerimos processos com APA, CCDR e Câmaras Municipais, incluindo licenciamento, monitorização e suporte documental.</p>
           </details>
@@ -402,7 +432,7 @@ activeNav: home
           <details class="faq-item rounded-md border border-slate-200 bg-white p-5">
             <summary class="flex cursor-pointer list-none items-start justify-between gap-4">
               <span class="text-lg font-semibold text-slate-900">Que tipos de contaminação conseguem remediar?</span>
-              <span class="faq-icon mt-1 text-2xl leading-none text-slate-400">+</span>
+              <i data-lucide="plus" class="faq-icon mt-1 h-5 w-5 text-slate-400" aria-hidden="true"></i>
             </summary>
             <p class="mt-4 border-t border-slate-100 pt-4 text-sm leading-7 text-slate-700">Trabalhamos com hidrocarbonetos, metais pesados e outros contaminantes, com soluções técnicas in situ e ex situ conforme o cenário.</p>
           </details>
@@ -410,7 +440,7 @@ activeNav: home
           <details class="faq-item rounded-md border border-slate-200 bg-white p-5">
             <summary class="flex cursor-pointer list-none items-start justify-between gap-4">
               <span class="text-lg font-semibold text-slate-900">Podem apoiar projetos fora dos postos de combustível?</span>
-              <span class="faq-icon mt-1 text-2xl leading-none text-slate-400">+</span>
+              <i data-lucide="plus" class="faq-icon mt-1 h-5 w-5 text-slate-400" aria-hidden="true"></i>
             </summary>
             <p class="mt-4 border-t border-slate-100 pt-4 text-sm leading-7 text-slate-700">Sim. Atuamos em construção, indústria e projetos municipais com o mesmo rigor técnico e foco em conformidade.</p>
           </details>
@@ -426,9 +456,9 @@ activeNav: home
           <p class="mt-4 max-w-xl text-base leading-8 text-slate-600 md:text-[1.15rem] md:leading-[1.5]">Estamos disponíveis para uma consulta inicial sem compromisso. Descreva o seu projeto e respondemos em 24 horas.</p>
 
           <div class="mt-8 space-y-3 text-slate-800">
-            <p class="text-base"><strong>&#128222; +351 XXX XXX XXX</strong></p>
-            <p class="text-base"><strong>&#9993; geral@higidus.pt</strong></p>
-            <p class="text-base"><strong>&#128205; [Morada]</strong></p>
+            <p class="flex items-center gap-2 text-base"><i data-lucide="phone" class="h-4 w-4" aria-hidden="true"></i><strong>+351 214 602 288</strong></p>
+            <p class="flex items-center gap-2 text-base"><i data-lucide="mail" class="h-4 w-4" aria-hidden="true"></i><strong>geral@higidus.pt</strong></p>
+            <p class="flex items-center gap-2 text-base"><i data-lucide="map-pin" class="h-4 w-4" aria-hidden="true"></i><strong>R. das Fisgas 442 Armazém 5, 2649-504 Alcabideche</strong></p>
           </div>
         </div>
 
@@ -436,23 +466,23 @@ activeNav: home
           <div class="grid gap-5 sm:grid-cols-2">
             <div class="sm:col-span-1">
               <label for="nome" class="mb-2 block text-sm font-medium text-slate-700">Nome *</label>
-              <input id="nome" name="nome" type="text" required class="w-full rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-900 outline-none ring-[#0B3B2E] focus:ring-2">
+              <input id="nome" name="nome" type="text" required class="form-control">
             </div>
             <div class="sm:col-span-1">
               <label for="email" class="mb-2 block text-sm font-medium text-slate-700">Email *</label>
-              <input id="email" name="email" type="email" required class="w-full rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-900 outline-none ring-[#0B3B2E] focus:ring-2">
+              <input id="email" name="email" type="email" required class="form-control">
             </div>
             <div class="sm:col-span-1">
               <label for="telefone" class="mb-2 block text-sm font-medium text-slate-700">Telefone *</label>
-              <input id="telefone" name="telefone" type="tel" required class="w-full rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-900 outline-none ring-[#0B3B2E] focus:ring-2">
+              <input id="telefone" name="telefone" type="tel" required class="form-control">
             </div>
             <div class="sm:col-span-1">
               <label for="empresa" class="mb-2 block text-sm font-medium text-slate-700">Empresa</label>
-              <input id="empresa" name="empresa" type="text" class="w-full rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-900 outline-none ring-[#0B3B2E] focus:ring-2">
+              <input id="empresa" name="empresa" type="text" class="form-control">
             </div>
             <div class="sm:col-span-2">
               <label for="setor" class="mb-2 block text-sm font-medium text-slate-700">Setor</label>
-              <select id="setor" name="setor" class="w-full rounded-md border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none ring-[#0B3B2E] focus:ring-2">
+              <select id="setor" name="setor" class="form-control">
                 <option>Construção</option>
                 <option>Indústria</option>
                 <option>Postos</option>
@@ -462,11 +492,11 @@ activeNav: home
             </div>
             <div class="sm:col-span-2">
               <label for="mensagem" class="mb-2 block text-sm font-medium text-slate-700">Mensagem</label>
-              <textarea id="mensagem" name="mensagem" rows="5" class="w-full rounded-md border border-slate-300 px-4 py-3 text-sm text-slate-900 outline-none ring-[#0B3B2E] focus:ring-2"></textarea>
+              <textarea id="mensagem" name="mensagem" rows="5" class="form-control"></textarea>
             </div>
           </div>
 
-          <button type="submit" class="mt-6 inline-flex rounded-md bg-[#0B3B2E] px-6 py-3 text-sm font-semibold text-white hover:bg-[#0d4c3a]">Enviar Pedido</button>
+          <button type="submit" class="mt-6 btn btn-primary btn-md">Enviar Pedido</button>
         </form>
       </div>
     </section>
@@ -474,6 +504,7 @@ activeNav: home
 
   {% include "partials/footer.njk" %}
 
+  <script src="/assets/vendor/lucide.min.js" defer></script>
   <script src="/assets/site.js" defer></script>
 </body>
 </html>

@@ -27,8 +27,6 @@ activeNav: services
   <meta name="twitter:title" content="Conformidade e Regulação Ambiental | HIGIDUS">
   <meta name="twitter:description" content="Regulação ambiental sem bloqueios no cronograma do projeto.">
   <meta name="twitter:image" content="https://example.com/assets/img/projeto-2.svg">
-
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/styles.css">
 
   <script type="application/ld+json">
@@ -54,7 +52,10 @@ activeNav: services
 
   <main id="main">
     <section class="relative border-b border-slate-200">
-      <img src="/assets/img/projeto-2.svg" alt="Gestão de conformidade e documentação ambiental" class="h-[400px] w-full object-cover md:h-[500px]">
+      <picture class="block">
+        <source srcset="/assets/img/projeto-2.avif" type="image/avif">
+        <img src="/assets/img/projeto-2.jpg" alt="Gestão de conformidade e documentação ambiental" class="h-[400px] w-full object-cover md:h-[500px]">
+      </picture>
       <div class="service-hero-overlay absolute inset-0"></div>
       <div class="absolute inset-0 mx-auto flex max-w-7xl items-end px-6 pb-10">
         <div class="max-w-3xl rounded-md border border-white/25 bg-black/20 p-6 text-white backdrop-blur-sm md:p-8">
@@ -191,7 +192,7 @@ activeNav: services
 
           <div class="flex flex-wrap items-center justify-between gap-3 border-t border-slate-200 bg-[#0B3B2E]/5 px-5 py-4 md:px-7">
             <p class="text-sm font-medium text-slate-800">Resultado esperado: processo regulatório previsível, com documentação robusta e menor risco de atrasos.</p>
-            <a href="/contacto/?servico=conformidade" class="inline-flex rounded-md bg-[#0B3B2E] px-5 py-2 text-sm font-semibold text-white hover:bg-[#0d4c3a]">Pedir consulta técnica</a>
+            <a href="/contacto/?servico=conformidade" class="btn btn-primary btn-md">Pedir consulta técnica</a>
           </div>
         </div>
       </div>
@@ -207,46 +208,35 @@ activeNav: services
         <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           <article class="surface-card p-5">
             <span class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#0B3B2E]/20 bg-[#0B3B2E]/5 text-[#0B3B2E]" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M10.125 2.25H5.625C5.00368 2.25 4.5 2.75368 4.5 3.375V20.625C4.5 21.2463 5.00368 21.75 5.625 21.75H18.375C18.9963 21.75 19.5 21.2463 19.5 20.625V11.625M10.125 2.25H10.5C15.4706 2.25 19.5 6.27944 19.5 11.25V11.625M10.125 2.25C11.989 2.25 13.5 3.76104 13.5 5.625V7.125C13.5 7.74632 14.0037 8.25 14.625 8.25H16.125C17.989 8.25 19.5 9.76104 19.5 11.625M9 15L11.25 17.25L15 12"/>
-              </svg>
+              <i data-lucide="file-check" class="h-5 w-5" aria-hidden="true"></i>
             </span>
             <h3 class="text-xl font-semibold text-slate-900">Licenciamento Ambiental</h3>
             <p class="mt-2 text-sm leading-6 text-slate-600">Gestão de processos com APA, CCDR e Câmaras Municipais.</p>
           </article>
           <article class="surface-card p-5">
             <span class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#0B3B2E]/20 bg-[#0B3B2E]/5 text-[#0B3B2E]" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M15 10.5C15 12.1569 13.6569 13.5 12 13.5C10.3431 13.5 9 12.1569 9 10.5C9 8.84315 10.3431 7.5 12 7.5C13.6569 7.5 15 8.84315 15 10.5Z"/>
-                <path d="M19.5 10.5C19.5 17.6421 12 21.75 12 21.75C12 21.75 4.5 17.6421 4.5 10.5C4.5 6.35786 7.85786 3 12 3C16.1421 3 19.5 6.35786 19.5 10.5Z"/>
-              </svg>
+              <i data-lucide="map-pin" class="h-5 w-5" aria-hidden="true"></i>
             </span>
             <h3 class="text-xl font-semibold text-slate-900">Componente de Solos em AIA</h3>
             <p class="mt-2 text-sm leading-6 text-slate-600">Preparação técnica para Avaliação de Impacte Ambiental.</p>
           </article>
           <article class="surface-card p-5">
             <span class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#0B3B2E]/20 bg-[#0B3B2E]/5 text-[#0B3B2E]" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20.25 6.375C20.25 8.65317 16.5563 10.5 12 10.5C7.44365 10.5 3.75 8.65317 3.75 6.375M20.25 6.375C20.25 4.09683 16.5563 2.25 12 2.25C7.44365 2.25 3.75 4.09683 3.75 6.375M20.25 6.375V17.625C20.25 19.9032 16.5563 21.75 12 21.75C7.44365 21.75 3.75 19.9032 3.75 17.625V6.375M20.25 6.375V10.125M3.75 6.375V10.125M20.25 10.125V13.875C20.25 16.1532 16.5563 18 12 18C7.44365 18 3.75 16.1532 3.75 13.875V10.125M20.25 10.125C20.25 12.4032 16.5563 14.25 12 14.25C7.44365 14.25 3.75 12.4032 3.75 10.125"/>
-              </svg>
+              <i data-lucide="database" class="h-5 w-5" aria-hidden="true"></i>
             </span>
             <h3 class="text-xl font-semibold text-slate-900">Monitorização Contínua</h3>
             <p class="mt-2 text-sm leading-6 text-slate-600">Programas de monitorização ambiental regular e reporte.</p>
           </article>
           <article class="surface-card p-5">
             <span class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#0B3B2E]/20 bg-[#0B3B2E]/5 text-[#0B3B2E]" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M10.125 2.25H5.625C5.00368 2.25 4.5 2.75368 4.5 3.375V20.625C4.5 21.2463 5.00368 21.75 5.625 21.75H18.375C18.9963 21.75 19.5 21.2463 19.5 20.625V11.625M10.125 2.25H10.5C15.4706 2.25 19.5 6.27944 19.5 11.25V11.625M10.125 2.25C11.989 2.25 13.5 3.76104 13.5 5.625V7.125C13.5 7.74632 14.0037 8.25 14.625 8.25H16.125C17.989 8.25 19.5 9.76104 19.5 11.625M9 15L11.25 17.25L15 12"/>
-              </svg>
+              <i data-lucide="file-check" class="h-5 w-5" aria-hidden="true"></i>
             </span>
             <h3 class="text-xl font-semibold text-slate-900">Documentação Regulatória</h3>
             <p class="mt-2 text-sm leading-6 text-slate-600">Relatórios técnicos, pareceres e submissões formais.</p>
           </article>
           <article class="surface-card p-5">
             <span class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#0B3B2E]/20 bg-[#0B3B2E]/5 text-[#0B3B2E]" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 21L15.8033 15.8033M15.8033 15.8033C17.1605 14.4461 18 12.5711 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C12.5711 18 14.4461 17.1605 15.8033 15.8033Z"/>
-              </svg>
+              <i data-lucide="search" class="h-5 w-5" aria-hidden="true"></i>
             </span>
             <h3 class="text-xl font-semibold text-slate-900">Acompanhamento a Entidades</h3>
             <p class="mt-2 text-sm leading-6 text-slate-600">Interlocução técnica para respostas e pedidos complementares.</p>
@@ -341,8 +331,8 @@ activeNav: services
           <h2 class="mt-3 max-w-3xl text-3xl font-semibold tracking-tight md:text-5xl">Precisa deste serviço?</h2>
           <p class="mt-4 max-w-2xl text-base leading-8 text-emerald-100">Peça uma consulta sem compromisso. Em menos de 24h apresentamos abordagem técnica e próximos passos.</p>
           <div class="mt-7 flex flex-wrap gap-3">
-            <a href="/contacto/?servico=conformidade" class="rounded-md bg-white px-6 py-3 text-sm font-semibold text-[#0B3B2E] hover:bg-emerald-50">Pedir Consulta</a>
-            <a href="tel:+351000000000" class="rounded-md border border-white/55 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10">Ligar +351 XXX XXX XXX</a>
+            <a href="/contacto/?servico=conformidade" class="btn btn-inverse btn-md">Pedir Consulta</a>
+            <a href="tel:+351214602288" class="btn btn-outline-light btn-md">Ligar +351 214 602 288</a>
           </div>
         </div>
       </div>
@@ -351,25 +341,9 @@ activeNav: services
 
   {% include "partials/footer.njk" %}
 
-  <div class="fixed bottom-5 right-5 z-[60]">
-    <button type="button" data-emergency-toggle aria-expanded="false" class="inline-flex items-center gap-2 rounded-md border border-[#0B3B2E]/25 bg-white px-4 py-3 text-sm font-semibold text-[#0B3B2E] shadow-lg hover:bg-slate-50"><span aria-hidden="true">&#9742;</span>Obra parada?</button>
-    <div data-emergency-panel class="mt-3 w-72 rounded-md border border-slate-200 bg-white p-4 shadow-2xl">
-      <p class="text-sm font-semibold text-slate-900">Resposta de Emergência</p>
-      <p class="mt-2 text-sm leading-6 text-slate-600">Mobilizamos em 24h para avaliação e plano de ação.</p>
-      <a href="tel:+351000000000" class="mt-3 inline-flex rounded-md bg-[#0B3B2E] px-4 py-2 text-sm font-semibold text-white hover:bg-[#0d4c3a]">+351 XXX XXX XXX</a>
-    </div>
-  </div>
+  {% include "partials/floating-widgets.njk" %}
 
-  <div id="cookie-banner" class="cookie-banner fixed bottom-0 left-0 right-0 z-[65] border-t border-slate-200 bg-white/95 px-6 py-4 shadow-[0_-6px_22px_rgba(15,23,42,0.12)] backdrop-blur">
-    <div class="mx-auto flex max-w-7xl flex-col gap-3 md:flex-row md:items-center md:justify-between">
-      <p class="text-sm text-slate-700">Utilizamos cookies para melhorar a experiência e analisar tráfego.</p>
-      <div class="flex gap-2">
-        <button type="button" data-cookie-reject class="rounded-md border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100">Recusar</button>
-        <button type="button" data-cookie-accept class="rounded-md bg-[#0B3B2E] px-4 py-2 text-sm font-semibold text-white hover:bg-[#0d4c3a]">Aceitar</button>
-      </div>
-    </div>
-  </div>
-
+  <script src="/assets/vendor/lucide.min.js" defer></script>
   <script src="/assets/site.js" defer></script>
 </body>
 </html>

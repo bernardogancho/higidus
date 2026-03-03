@@ -17,7 +17,6 @@ activeNav: projects
   <meta property="og:description" content="Centenas de intervenções. Décadas de resultados.">
   <meta property="og:url" content="https://example.com/projetos/">
   <meta property="og:image" content="https://example.com/assets/img/projeto-1.svg">
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body class="bg-white text-slate-900 antialiased">
@@ -49,10 +48,10 @@ activeNav: projects
     <section class="border-b border-slate-200 bg-[#f6f8fc]">
       <div class="mx-auto max-w-7xl px-6 py-16 md:py-20">
         <div class="flex flex-wrap gap-2">
-          <button type="button" data-case-filter="todos" aria-pressed="true" class="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700">Todos</button>
-          <button type="button" data-case-filter="construcao" aria-pressed="false" class="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700">Construção</button>
-          <button type="button" data-case-filter="industria" aria-pressed="false" class="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700">Indústria</button>
-          <button type="button" data-case-filter="postos" aria-pressed="false" class="rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700">Postos</button>
+          <button type="button" data-case-filter="todos" aria-pressed="true" class="btn btn-filter btn-md">Todos</button>
+          <button type="button" data-case-filter="construcao" aria-pressed="false" class="btn btn-filter btn-md">Construção</button>
+          <button type="button" data-case-filter="industria" aria-pressed="false" class="btn btn-filter btn-md">Indústria</button>
+          <button type="button" data-case-filter="postos" aria-pressed="false" class="btn btn-filter btn-md">Postos</button>
         </div>
 
         <div class="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -62,7 +61,7 @@ activeNav: projects
             <h3 class="mt-3 text-xl font-semibold text-slate-900">Remediação de solo contaminado por hidrocarbonetos</h3>
             <p class="mt-2 text-sm leading-6 text-slate-600">Avaliação, tratamento e conformidade APA alcançados em prazo operacional.</p>
             <p class="mt-2 text-sm font-semibold text-[#0B3B2E]">Conformidade APA em 8 semanas</p>
-            <button type="button" data-case-open="0" class="mt-4 rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-100">Ver detalhe</button>
+            <button type="button" data-case-open="0" class="mt-4 btn btn-secondary btn-md">Ver detalhe</button>
           </article>
 
           <article data-case-card data-sector="construcao" class="surface-card overflow-hidden p-4">
@@ -71,7 +70,7 @@ activeNav: projects
             <h3 class="mt-3 text-xl font-semibold text-slate-900">Classificação de solos em obra de expansão urbana</h3>
             <p class="mt-2 text-sm leading-6 text-slate-600">Plano de amostragem e classificação em faseamento alinhado com cronograma.</p>
             <p class="mt-2 text-sm font-semibold text-[#0B3B2E]">2.000m³ classificados em 12 dias</p>
-            <button type="button" data-case-open="1" class="mt-4 rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-100">Ver detalhe</button>
+            <button type="button" data-case-open="1" class="mt-4 btn btn-secondary btn-md">Ver detalhe</button>
           </article>
 
           <article data-case-card data-sector="industria" class="surface-card overflow-hidden p-4">
@@ -80,7 +79,7 @@ activeNav: projects
             <h3 class="mt-3 text-xl font-semibold text-slate-900">Reabilitação de ativo industrial desativado</h3>
             <p class="mt-2 text-sm leading-6 text-slate-600">Caracterização de passivo, remediação por fases e fecho regulatório final.</p>
             <p class="mt-2 text-sm font-semibold text-[#0B3B2E]">Fecho técnico-regulatório em 10 semanas</p>
-            <button type="button" data-case-open="2" class="mt-4 rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-100">Ver detalhe</button>
+            <button type="button" data-case-open="2" class="mt-4 btn btn-secondary btn-md">Ver detalhe</button>
           </article>
 
           <article data-case-card data-sector="postos" class="surface-card overflow-hidden p-4">
@@ -89,7 +88,7 @@ activeNav: projects
             <h3 class="mt-3 text-xl font-semibold text-slate-900">Resposta a derrame com contenção imediata</h3>
             <p class="mt-2 text-sm leading-6 text-slate-600">Mobilização rápida, controlo do impacto e plano de remediação aprovado.</p>
             <p class="mt-2 text-sm font-semibold text-[#0B3B2E]">Equipa em campo em 24h</p>
-            <button type="button" data-case-open="3" class="mt-4 rounded-md border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-100">Ver detalhe</button>
+            <button type="button" data-case-open="3" class="mt-4 btn btn-secondary btn-md">Ver detalhe</button>
           </article>
         </div>
       </div>
@@ -98,7 +97,7 @@ activeNav: projects
         <div class="max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-md border border-slate-200 bg-white shadow-2xl">
           <div class="p-6 md:p-8">
             <div class="mb-5 flex justify-end">
-              <button type="button" data-case-close class="rounded-md border border-slate-200 bg-[#eef2ff] px-3 py-1 text-lg leading-none text-[#4f46e5] hover:bg-[#e0e7ff]" aria-label="Fechar">&times;</button>
+              <button type="button" data-case-close class="btn btn-icon-md btn-icon-soft" aria-label="Fechar"><i data-lucide="x" class="h-5 w-5" aria-hidden="true"></i></button>
             </div>
 
             <article data-case-panel="0" class="hidden">
@@ -124,13 +123,25 @@ activeNav: projects
 
     <section class="border-b border-slate-200 bg-white">
       <div class="mx-auto max-w-7xl px-6 py-16 md:py-20">
-        <h2 class="text-center text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">Clientes de Referência</h2>
-        <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-          <div class="rounded-md border border-slate-200 bg-white px-6 py-5 text-center text-lg font-semibold text-slate-400 transition hover:text-slate-900">Galp</div>
-          <div class="rounded-md border border-slate-200 bg-white px-6 py-5 text-center text-lg font-semibold text-slate-400 transition hover:text-slate-900">Repsol</div>
-          <div class="rounded-md border border-slate-200 bg-white px-6 py-5 text-center text-lg font-semibold text-slate-400 transition hover:text-slate-900">BP</div>
-          <div class="rounded-md border border-slate-200 bg-white px-6 py-5 text-center text-lg font-semibold text-slate-400 transition hover:text-slate-900">PRIO</div>
-          <div class="rounded-md border border-slate-200 bg-white px-6 py-5 text-center text-lg font-semibold text-slate-400 transition hover:text-slate-900">Mota-Engil</div>
+        <h2 class="text-center text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">A Confiança das Maiores Marcas</h2>
+        <p class="mt-3 text-center text-sm text-slate-600">Veja casos completos na página de <a href="/projetos/" class="btn-text">Projetos e Referências</a>.</p>
+        <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6" aria-label="Logótipos de clientes de referência">
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/galp.svg" alt="Galp" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/repsol.svg" alt="Repsol" class="max-h-10 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/bp-new.svg" alt="BP" class="logo-bp-tile w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/prio.png" alt="PRIO" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/moeve.svg" alt="Moeve" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/gaspe.jpg" alt="Gaspe" class="max-h-11 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/tfuel.png" alt="Tfuel" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/eco-oil.png" alt="Eco-Oil" class="max-h-10 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/auchan.svg" alt="Auchan" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/intermarche.svg" alt="Intermarché" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/e-leclerc.svg" alt="E.Leclerc" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/mota-engil.svg" alt="Mota-Engil" class="max-h-9 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/teixeira-duarte.png" alt="Teixeira Duarte" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/casais.svg" alt="Casais" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/efacec.svg" alt="Efacec" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/infraestruturas-portugal.svg" alt="Infraestruturas de Portugal" class="max-h-7 w-auto" loading="lazy" decoding="async"></div>
         </div>
       </div>
     </section>
@@ -156,10 +167,9 @@ activeNav: projects
 
   {% include "partials/footer.njk" %}
 
-  <div class="fixed bottom-5 right-5 z-[60]"><button type="button" data-emergency-toggle aria-expanded="false" class="inline-flex items-center gap-2 rounded-md border border-[#0B3B2E]/25 bg-white px-4 py-3 text-sm font-semibold text-[#0B3B2E] shadow-lg hover:bg-slate-50"><span aria-hidden="true">&#9742;</span>Obra parada?</button><div data-emergency-panel class="mt-3 w-72 rounded-md border border-slate-200 bg-white p-4 shadow-2xl"><p class="text-sm font-semibold text-slate-900">Resposta de Emergência</p><p class="mt-2 text-sm leading-6 text-slate-600">Mobilizamos em 24h para avaliação e plano de ação.</p><a href="tel:+351000000000" class="mt-3 inline-flex rounded-md bg-[#0B3B2E] px-4 py-2 text-sm font-semibold text-white hover:bg-[#0d4c3a]">+351 XXX XXX XXX</a></div></div>
+  {% include "partials/floating-widgets.njk" %}
 
-  <div id="cookie-banner" class="cookie-banner fixed bottom-0 left-0 right-0 z-[65] border-t border-slate-200 bg-white/95 px-6 py-4 shadow-[0_-6px_22px_rgba(15,23,42,0.12)] backdrop-blur"><div class="mx-auto flex max-w-7xl flex-col gap-3 md:flex-row md:items-center md:justify-between"><p class="text-sm text-slate-700">Utilizamos cookies para melhorar a experiência e analisar tráfego.</p><div class="flex gap-2"><button type="button" data-cookie-reject class="rounded-md border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100">Recusar</button><button type="button" data-cookie-accept class="rounded-md bg-[#0B3B2E] px-4 py-2 text-sm font-semibold text-white hover:bg-[#0d4c3a]">Aceitar</button></div></div></div>
-
+  <script src="/assets/vendor/lucide.min.js" defer></script>
   <script src="/assets/site.js" defer></script>
 </body>
 </html>

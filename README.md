@@ -10,6 +10,7 @@ Multi-page website with shared design system, strong SEO foundations, and GEO-or
 ## Reusable Global Blocks
 - Header: `/_includes/partials/header.njk`
 - Footer: `/_includes/partials/footer.njk`
+- Floating widgets (emergency + cookie): `/_includes/partials/floating-widgets.njk`
 
 All pages include these partials, so navigation and footer stay consistent site-wide.
 Per-page active state is controlled via front matter:
@@ -44,7 +45,8 @@ Generated output is written to `/_site`.
 - `/404.html`
 
 ## Shared Assets
-- `/assets/styles.css`: global design system styles, layout guides, interactions styling.
+- `/assets/styles.input.css`: Tailwind source (utilities + component layer + custom interactions).
+- `/assets/styles.css`: compiled Tailwind CSS output used by all pages.
 - `/assets/site.js`: shared interactions (mobile menu, counters, service modal, case modal, filters, floating emergency CTA, cookie banner, form prefill from query params).
 - `/assets/img/*.svg`: self-hosted placeholder visuals for all sections.
 
@@ -62,6 +64,7 @@ Generated output is written to `/_site`.
 4. Replace indicative metrics (`+120`, `+60`, etc.) with audited real numbers.
 5. Review legal pages and cookie handling for final GDPR compliance.
 
-## Performance Note
-- Tailwind is loaded via CDN for speed of iteration.
-- For production performance, compile Tailwind and serve optimized static CSS/JS bundles.
+## CSS Build
+- Tailwind is compiled locally (no CDN runtime dependency).
+- `npm run css:watch` watches and rebuilds `/assets/styles.css`.
+- `npm run css:build` creates a minified production CSS bundle.

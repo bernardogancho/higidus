@@ -1,4 +1,9 @@
 (function () {
+  function initLucideIcons() {
+    if (!window.lucide || typeof window.lucide.createIcons !== "function") return;
+    window.lucide.createIcons();
+  }
+
   function initMobileMenus() {
     var toggles = Array.prototype.slice.call(document.querySelectorAll("[data-mobile-toggle]"));
     if (!toggles.length) return;
@@ -385,6 +390,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    initLucideIcons();
     initGuideVisibilityFromAnchor();
     initHeaderTheme();
     initMobileMenus();

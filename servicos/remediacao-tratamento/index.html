@@ -27,8 +27,6 @@ activeNav: services
   <meta name="twitter:title" content="Remediação e Tratamento de Solos | HIGIDUS">
   <meta name="twitter:description" content="Da confirmação da contaminação à descontaminação validada em campo.">
   <meta name="twitter:image" content="https://example.com/assets/img/projeto-1.svg">
-
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="/assets/styles.css">
 
   <script type="application/ld+json">
@@ -54,7 +52,10 @@ activeNav: services
 
   <main id="main">
     <section class="relative border-b border-slate-200">
-      <img src="/assets/img/projeto-1.svg" alt="Intervenção de remediação de solos contaminados" class="h-[400px] w-full object-cover md:h-[500px]">
+      <picture class="block">
+        <source srcset="/assets/img/projeto-1.avif" type="image/avif">
+        <img src="/assets/img/projeto-1.jpg" alt="Intervenção de remediação de solos contaminados" class="h-[400px] w-full object-cover md:h-[500px]">
+      </picture>
       <div class="service-hero-overlay absolute inset-0"></div>
       <div class="absolute inset-0 mx-auto flex max-w-7xl items-end px-6 pb-10">
         <div class="max-w-3xl rounded-md border border-white/25 bg-black/20 p-6 text-white backdrop-blur-sm md:p-8">
@@ -184,7 +185,7 @@ activeNav: services
 
           <div class="flex flex-wrap items-center justify-between gap-3 border-t border-slate-200 bg-[#0B3B2E]/5 px-5 py-4 md:px-7">
             <p class="text-sm font-medium text-slate-800">Resultado esperado: descontaminação executada com controlo técnico, prazos protegidos e processo regulatório fechado.</p>
-            <a href="/contacto/?servico=remediacao" class="inline-flex rounded-md bg-[#0B3B2E] px-5 py-2 text-sm font-semibold text-white hover:bg-[#0d4c3a]">Pedir consulta técnica</a>
+            <a href="/contacto/?servico=remediacao" class="btn btn-primary btn-md">Pedir consulta técnica</a>
           </div>
         </div>
       </div>
@@ -200,48 +201,35 @@ activeNav: services
         <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           <article class="surface-card p-5">
             <span class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#0B3B2E]/20 bg-[#0B3B2E]/5 text-[#0B3B2E]" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3.75 6C3.75 4.75736 4.75736 3.75 6 3.75H8.25C9.49264 3.75 10.5 4.75736 10.5 6V8.25C10.5 9.49264 9.49264 10.5 8.25 10.5H6C4.75736 10.5 3.75 9.49264 3.75 8.25V6Z"/>
-                <path d="M3.75 15.75C3.75 14.5074 4.75736 13.5 6 13.5H8.25C9.49264 13.5 10.5 14.5074 10.5 15.75V18C10.5 19.2426 9.49264 20.25 8.25 20.25H6C4.75736 20.25 3.75 19.2426 3.75 18V15.75Z"/>
-                <path d="M13.5 6C13.5 4.75736 14.5074 3.75 15.75 3.75H18C19.2426 3.75 20.25 4.75736 20.25 6V8.25C20.25 9.49264 19.2426 10.5 18 10.5H15.75C14.5074 10.5 13.5 9.49264 13.5 8.25V6Z"/>
-                <path d="M13.5 15.75C13.5 14.5074 14.5074 13.5 15.75 13.5H18C19.2426 13.5 20.25 14.5074 20.25 15.75V18C20.25 19.2426 19.2426 20.25 18 20.25H15.75C14.5074 20.25 13.5 19.2426 13.5 18V15.75Z"/>
-              </svg>
+              <i data-lucide="layout-grid" class="h-5 w-5" aria-hidden="true"></i>
             </span>
             <h3 class="text-xl font-semibold text-slate-900">Projeto de Remediação</h3>
             <p class="mt-2 text-sm leading-6 text-slate-600">Soluções in situ e ex situ adaptadas ao contaminante e ao contexto.</p>
           </article>
           <article class="surface-card p-5">
             <span class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#0B3B2E]/20 bg-[#0B3B2E]/5 text-[#0B3B2E]" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9.75001 3.10408V8.81802C9.75001 9.41476 9.51295 9.98705 9.091 10.409L5.00001 14.5M9.75001 3.10408C9.49886 3.12743 9.24884 3.15465 9.00001 3.18568M9.75001 3.10408C10.4908 3.03521 11.2413 3 12 3C12.7587 3 13.5093 3.03521 14.25 3.10408M14.25 3.10408V8.81802C14.25 9.41476 14.4871 9.98705 14.909 10.409L19.8 15.3M14.25 3.10408C14.5011 3.12743 14.7512 3.15465 15 3.18568M19.8 15.3L18.2299 15.6925C16.1457 16.2136 13.9216 15.9608 12 15C10.0784 14.0392 7.85435 13.7864 5.7701 14.3075L5.00001 14.5M19.8 15.3L21.2022 16.7022C22.4341 17.9341 21.8527 20.0202 20.1354 20.3134C17.4911 20.7649 14.773 21 12 21C9.227 21 6.50891 20.7649 3.86459 20.3134C2.14728 20.0202 1.56591 17.9341 2.7978 16.7022L5.00001 14.5"/>
-              </svg>
+              <i data-lucide="flask-conical" class="h-5 w-5" aria-hidden="true"></i>
             </span>
             <h3 class="text-xl font-semibold text-slate-900">Tratamento de Hidrocarbonetos</h3>
             <p class="mt-2 text-sm leading-6 text-slate-600">Especialidade core para TPH, BTEX e PAHs em cenários críticos.</p>
           </article>
           <article class="surface-card p-5">
             <span class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#0B3B2E]/20 bg-[#0B3B2E]/5 text-[#0B3B2E]" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20.25 6.375C20.25 8.65317 16.5563 10.5 12 10.5C7.44365 10.5 3.75 8.65317 3.75 6.375M20.25 6.375C20.25 4.09683 16.5563 2.25 12 2.25C7.44365 2.25 3.75 4.09683 3.75 6.375M20.25 6.375V17.625C20.25 19.9032 16.5563 21.75 12 21.75C7.44365 21.75 3.75 19.9032 3.75 17.625V6.375M20.25 6.375V10.125M3.75 6.375V10.125M20.25 10.125V13.875C20.25 16.1532 16.5563 18 12 18C7.44365 18 3.75 16.1532 3.75 13.875V10.125M20.25 10.125C20.25 12.4032 16.5563 14.25 12 14.25C7.44365 14.25 3.75 12.4032 3.75 10.125"/>
-              </svg>
+              <i data-lucide="database" class="h-5 w-5" aria-hidden="true"></i>
             </span>
             <h3 class="text-xl font-semibold text-slate-900">Metais Pesados</h3>
             <p class="mt-2 text-sm leading-6 text-slate-600">Remediação de contaminantes químicos e metais com controlo técnico.</p>
           </article>
           <article class="surface-card p-5">
             <span class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#0B3B2E]/20 bg-[#0B3B2E]/5 text-[#0B3B2E]" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M10.125 2.25H5.625C5.00368 2.25 4.5 2.75368 4.5 3.375V20.625C4.5 21.2463 5.00368 21.75 5.625 21.75H18.375C18.9963 21.75 19.5 21.2463 19.5 20.625V11.625M10.125 2.25H10.5C15.4706 2.25 19.5 6.27944 19.5 11.25V11.625M10.125 2.25C11.989 2.25 13.5 3.76104 13.5 5.625V7.125C13.5 7.74632 14.0037 8.25 14.625 8.25H16.125C17.989 8.25 19.5 9.76104 19.5 11.625M9 15L11.25 17.25L15 12"/>
-              </svg>
+              <i data-lucide="file-check" class="h-5 w-5" aria-hidden="true"></i>
             </span>
             <h3 class="text-xl font-semibold text-slate-900">Licenciamento CCDR</h3>
             <p class="mt-2 text-sm leading-6 text-slate-600">Tratamos toda a componente regulatória da operação de remediação.</p>
           </article>
           <article class="surface-card p-5">
             <span class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-md border border-[#0B3B2E]/20 bg-[#0B3B2E]/5 text-[#0B3B2E]" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 12.7498L11.25 14.9998L15 9.74985M12 2.71411C9.8495 4.75073 6.94563 5.99986 3.75 5.99986C3.69922 5.99986 3.64852 5.99955 3.59789 5.99892C3.2099 7.17903 3 8.43995 3 9.74991C3 15.3414 6.82432 20.0397 12 21.3719C17.1757 20.0397 21 15.3414 21 9.74991C21 8.43995 20.7901 7.17903 20.4021 5.99892C20.3515 5.99955 20.3008 5.99986 20.25 5.99986C17.0544 5.99986 14.1505 4.75073 12 2.71411Z"/>
-              </svg>
+              <i data-lucide="shield-check" class="h-5 w-5" aria-hidden="true"></i>
             </span>
             <h3 class="text-xl font-semibold text-slate-900">Monitorização Pós-Remediação</h3>
             <p class="mt-2 text-sm leading-6 text-slate-600">Verificação final para comprovar níveis em conformidade.</p>
@@ -336,8 +324,8 @@ activeNav: services
           <h2 class="mt-3 max-w-3xl text-3xl font-semibold tracking-tight md:text-5xl">Precisa deste serviço?</h2>
           <p class="mt-4 max-w-2xl text-base leading-8 text-emerald-100">Peça uma consulta sem compromisso. Em menos de 24h apresentamos abordagem técnica e próximos passos.</p>
           <div class="mt-7 flex flex-wrap gap-3">
-            <a href="/contacto/?servico=remediacao" class="rounded-md bg-white px-6 py-3 text-sm font-semibold text-[#0B3B2E] hover:bg-emerald-50">Pedir Consulta</a>
-            <a href="tel:+351000000000" class="rounded-md border border-white/55 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10">Ligar +351 XXX XXX XXX</a>
+            <a href="/contacto/?servico=remediacao" class="btn btn-inverse btn-md">Pedir Consulta</a>
+            <a href="tel:+351214602288" class="btn btn-outline-light btn-md">Ligar +351 214 602 288</a>
           </div>
         </div>
       </div>
@@ -346,25 +334,9 @@ activeNav: services
 
   {% include "partials/footer.njk" %}
 
-  <div class="fixed bottom-5 right-5 z-[60]">
-    <button type="button" data-emergency-toggle aria-expanded="false" class="inline-flex items-center gap-2 rounded-md border border-[#0B3B2E]/25 bg-white px-4 py-3 text-sm font-semibold text-[#0B3B2E] shadow-lg hover:bg-slate-50"><span aria-hidden="true">&#9742;</span>Obra parada?</button>
-    <div data-emergency-panel class="mt-3 w-72 rounded-md border border-slate-200 bg-white p-4 shadow-2xl">
-      <p class="text-sm font-semibold text-slate-900">Resposta de Emergência</p>
-      <p class="mt-2 text-sm leading-6 text-slate-600">Mobilizamos em 24h para avaliação e plano de ação.</p>
-      <a href="tel:+351000000000" class="mt-3 inline-flex rounded-md bg-[#0B3B2E] px-4 py-2 text-sm font-semibold text-white hover:bg-[#0d4c3a]">+351 XXX XXX XXX</a>
-    </div>
-  </div>
+  {% include "partials/floating-widgets.njk" %}
 
-  <div id="cookie-banner" class="cookie-banner fixed bottom-0 left-0 right-0 z-[65] border-t border-slate-200 bg-white/95 px-6 py-4 shadow-[0_-6px_22px_rgba(15,23,42,0.12)] backdrop-blur">
-    <div class="mx-auto flex max-w-7xl flex-col gap-3 md:flex-row md:items-center md:justify-between">
-      <p class="text-sm text-slate-700">Utilizamos cookies para melhorar a experiência e analisar tráfego.</p>
-      <div class="flex gap-2">
-        <button type="button" data-cookie-reject class="rounded-md border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100">Recusar</button>
-        <button type="button" data-cookie-accept class="rounded-md bg-[#0B3B2E] px-4 py-2 text-sm font-semibold text-white hover:bg-[#0d4c3a]">Aceitar</button>
-      </div>
-    </div>
-  </div>
-
+  <script src="/assets/vendor/lucide.min.js" defer></script>
   <script src="/assets/site.js" defer></script>
 </body>
 </html>
