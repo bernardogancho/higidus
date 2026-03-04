@@ -1,0 +1,40 @@
+backend:
+  name: github
+  repo: bernardogancho/higidus-site
+  branch: staging
+
+local_backend: true
+
+publish_mode: editorial_workflow
+locale: pt
+
+media_folder: "assets/img/blog"
+public_folder: "/assets/img/blog"
+
+site_url: https://example.com
+logo_url: /assets/favicon.svg
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "blog/posts"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}"
+    preview_path: "blog/{{slug}}"
+    sortable_fields: ["date", "title"]
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descrição (SEO)", name: "description", widget: "text", hint: "Até 155 caracteres recomendado." }
+      - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
+      - { label: "Atualizado em", name: "updated", widget: "datetime", required: false, format: "YYYY-MM-DD", time_format: false }
+      - { label: "Autor", name: "author", widget: "string", default: "Equipa HIGIDUS" }
+      - { label: "Imagem de Capa", name: "coverImage", widget: "image", required: false }
+      - label: "Tópicos"
+        name: "topics"
+        widget: "list"
+        required: false
+      - { label: "Rascunho", name: "draft", widget: "boolean", default: false }
+      - { label: "Conteúdo", name: "body", widget: "markdown" }

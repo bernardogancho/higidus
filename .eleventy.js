@@ -2,12 +2,39 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.ignores.add("404.html");
 
+  eleventyConfig.addFilter("readableDate", (dateObj) => {
+    if (!dateObj) return "";
+    return new Intl.DateTimeFormat("pt-PT", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+      timeZone: "UTC",
+    }).format(new Date(dateObj));
+  });
+
+  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+    if (!dateObj) return "";
+    return new Date(dateObj).toISOString().slice(0, 10);
+  });
+
+  eleventyConfig.addFilter("absoluteUrl", (path, base = "https://example.com") => {
+    if (!path) return base;
+    return new URL(path, base).toString();
+  });
+
+  eleventyConfig.addCollection("blog", (collectionApi) => {
+    return collectionApi
+      .getFilteredByTag("blog")
+      .filter((item) => item.data.draft !== true)
+      .sort((a, b) => b.date - a.date);
+  });
+
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("admin/config.yml");
   eleventyConfig.addPassthroughCopy({
     "node_modules/lucide/dist/umd/lucide.min.js": "assets/vendor/lucide.min.js",
   });
   eleventyConfig.addPassthroughCopy("robots.txt");
-  eleventyConfig.addPassthroughCopy("sitemap.xml");
   eleventyConfig.addPassthroughCopy("site.webmanifest");
   eleventyConfig.addPassthroughCopy("404.html");
   eleventyConfig.addPassthroughCopy(".htaccess");

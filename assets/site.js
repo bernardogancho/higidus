@@ -389,6 +389,128 @@
     );
   }
 
+  function initBlogReadingUX() {
+    var content = document.querySelector("[data-reading-content]");
+    if (!content) return;
+
+    var toc = document.querySelector("[data-post-toc]");
+    var tocEmpty = document.querySelector("[data-post-toc-empty]");
+    var progressFill = document.querySelector("[data-reading-progress-fill]");
+    var progressLabel = document.querySelector("[data-reading-progress-label]");
+    var header = document.querySelector("[data-site-header]");
+
+    function headerOffset() {
+      if (!header) return 64;
+      return header.offsetHeight || 64;
+    }
+
+    function slugify(text) {
+      return (text || "")
+        .toString()
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+    }
+
+    var headings = Array.prototype.slice.call(content.querySelectorAll("h2, h3"));
+    var tocLinks = [];
+
+    if (toc && headings.length) {
+      var idCounts = {};
+
+      headings.forEach(function (heading, index) {
+        var tagName = heading.tagName ? heading.tagName.toLowerCase() : "h2";
+        var rawId = heading.getAttribute("id") || "";
+        var baseId = rawId || slugify(heading.textContent) || "secao-" + (index + 1);
+        var dedupIndex = (idCounts[baseId] || 0) + 1;
+        idCounts[baseId] = dedupIndex;
+        var finalId = dedupIndex > 1 ? baseId + "-" + dedupIndex : baseId;
+
+        heading.setAttribute("id", finalId);
+
+        var li = document.createElement("li");
+        li.className = "post-toc-item " + (tagName === "h3" ? "level-h3" : "level-h2");
+
+        var link = document.createElement("a");
+        link.className = "post-toc-item-link";
+        link.href = "#" + finalId;
+        link.textContent = heading.textContent || "Secção";
+        link.setAttribute("data-post-toc-link", finalId);
+        li.appendChild(link);
+        toc.appendChild(li);
+
+        tocLinks.push(link);
+      });
+
+      if (tocEmpty) tocEmpty.hidden = true;
+    } else if (tocEmpty) {
+      tocEmpty.hidden = false;
+    }
+
+    function readProgress() {
+      var rect = content.getBoundingClientRect();
+      var start = window.scrollY + rect.top - headerOffset() - 22;
+      var end = start + content.offsetHeight - window.innerHeight * 0.55;
+
+      if (end <= start) {
+        return window.scrollY >= start ? 100 : 0;
+      }
+
+      var progress = ((window.scrollY - start) / (end - start)) * 100;
+      if (progress < 0) return 0;
+      if (progress > 100) return 100;
+      return progress;
+    }
+
+    function updateProgress() {
+      if (!progressFill && !progressLabel) return;
+      var progress = readProgress();
+      var remaining = Math.max(0, Math.ceil(100 - progress));
+
+      if (progressFill) {
+        progressFill.style.width = progress.toFixed(1) + "%";
+      }
+
+      if (progressLabel) {
+        progressLabel.textContent = remaining === 0 ? "Concluído" : "Faltam " + remaining + "%";
+      }
+    }
+
+    function updateActiveToc() {
+      if (!tocLinks.length) return;
+      var marker = window.scrollY + headerOffset() + 34;
+      var activeId = tocLinks[0].getAttribute("data-post-toc-link");
+
+      headings.forEach(function (heading) {
+        var headingTop = heading.getBoundingClientRect().top + window.scrollY;
+        if (headingTop <= marker) {
+          activeId = heading.getAttribute("id");
+        }
+      });
+
+      tocLinks.forEach(function (link) {
+        var isActive = link.getAttribute("data-post-toc-link") === activeId;
+        link.classList.toggle("is-active", isActive);
+        if (isActive) {
+          link.setAttribute("aria-current", "true");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    }
+
+    function onScroll() {
+      updateProgress();
+      updateActiveToc();
+    }
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initLucideIcons();
     initGuideVisibilityFromAnchor();
@@ -401,5 +523,6 @@
     initEmergencyWidget();
     initCookieBanner();
     initFormPrefillFromQuery();
+    initBlogReadingUX();
   });
 })();

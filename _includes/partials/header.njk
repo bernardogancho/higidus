@@ -1,12 +1,13 @@
 {% set nav = activeNav or "" %}
 {% set currentPath = page.url or "" %}
 {% set navItems = [
-  { "key": "home", "label": "Início", "href": "/", "desktop": false, "mobile": true },
-  { "key": "company", "label": "Sobre Nós", "href": "/sobre-nos/", "desktop": true, "mobile": true },
+  { "key": "home", "label": "Início", "href": "/", "desktop": true, "mobile": true },
   { "key": "services", "label": "Serviços", "href": "/servicos/avaliacao-diagnostico/", "desktop": true, "mobile": true },
   { "key": "sectors", "label": "Setores", "href": "/setores/construcao/", "desktop": true, "mobile": true },
   { "key": "projects", "label": "Projetos", "href": "/projetos/", "desktop": true, "mobile": true },
-  { "key": "certifications", "label": "Certificações", "href": "/certificacoes/", "desktop": true, "mobile": true }
+  { "key": "company", "label": "Sobre Nós", "href": "/sobre-nos/", "desktop": true, "mobile": true },
+  { "key": "certifications", "label": "Certificações", "href": "/certificacoes/", "desktop": true, "mobile": true },
+  { "key": "blog", "label": "Blog", "href": "/blog/", "desktop": true, "mobile": true }
 ] %}
 {% set serviceItems = [
   { "href": "/servicos/avaliacao-diagnostico/", "label": "Avaliação e Diagnóstico", "description": "Classificação, amostragem e análise de risco.", "image": "/assets/img/service-diagnostico-card.jpg", "alt": "Avaliação e Diagnóstico de Solos" },
