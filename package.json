@@ -2,7 +2,7 @@
   "name": "higidus-site",
   "private": true,
   "version": "1.0.0",
-  "description": "HIGIDUS multi-page website powered by Eleventy",
+  "description": "Hígidus multi-page website powered by Eleventy",
   "scripts": {
     "css:build": "tailwindcss -i ./assets/styles.input.css -o ./assets/styles.css --minify",
     "css:watch": "tailwindcss -i ./assets/styles.input.css -o ./assets/styles.css --watch",

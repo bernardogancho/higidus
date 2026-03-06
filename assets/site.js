@@ -46,13 +46,58 @@
     var header = document.querySelector("[data-site-header]");
     if (!header) return;
 
+    var rampEnd = 120;
+    var switchAt = 64;
+    var ticking = false;
+
+    function clamp(value, min, max) {
+      return Math.min(Math.max(value, min), max);
+    }
+
+    function lerp(from, to, t) {
+      return from + (to - from) * t;
+    }
+
+    function rgba(r, g, b, a) {
+      return "rgba(" + Math.round(r) + ", " + Math.round(g) + ", " + Math.round(b) + ", " + a.toFixed(3) + ")";
+    }
+
     function apply() {
-      var isScrolled = window.scrollY > 14;
+      var y = window.scrollY || 0;
+      var progress = clamp(y / rampEnd, 0, 1);
+      var isScrolled = y > switchAt;
+
+      header.style.backgroundColor = rgba(
+        lerp(11, 255, progress),
+        lerp(59, 255, progress),
+        lerp(46, 255, progress),
+        lerp(0.97, 0.985, progress)
+      );
+
+      header.style.borderColor = rgba(
+        lerp(255, 226, progress),
+        lerp(255, 232, progress),
+        lerp(255, 240, progress),
+        lerp(0.16, 1, progress)
+      );
+
+      var shadowAlpha = lerp(0, 0.06, progress);
+      header.style.boxShadow = shadowAlpha < 0.002 ? "none" : "0 10px 22px rgba(15, 23, 42, " + shadowAlpha.toFixed(3) + ")";
+
       header.classList.toggle("is-scrolled", isScrolled);
     }
 
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        apply();
+        ticking = false;
+      });
+    }
+
     apply();
-    window.addEventListener("scroll", apply, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", apply);
   }
 

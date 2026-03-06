@@ -1,4 +1,4 @@
-# HIGIDUS Website (11ty + HTML + Tailwind)
+# Hígidus Website (11ty + HTML + Tailwind)
 
 Multi-page website with shared design system, strong SEO foundations, and GEO-oriented positioning.
 

@@ -1,6 +1,6 @@
 {
-  "name": "HIGIDUS",
-  "short_name": "HIGIDUS",
+  "name": "Hígidus",
+  "short_name": "Hígidus",
   "description": "Especialistas em solos contaminados, remediação e conformidade ambiental em Portugal.",
   "start_url": "/",
   "display": "standalone",
@@ -8,7 +8,7 @@
   "theme_color": "#0B3B2E",
   "icons": [
     {
-      "src": "/assets/favicon.svg",
+      "src": "/assets/brand/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     }

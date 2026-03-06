@@ -2,7 +2,7 @@
 <html lang="pt-PT">
 <head>
   {% set siteUrl = "https://example.com" %}
-  {% set postTitle = seoTitle or (title ~ " | Blog HIGIDUS") %}
+  {% set postTitle = seoTitle or (title ~ " | Blog Hígidus") %}
   {% set postDescription = description or "Insights técnicos sobre solos contaminados, remediação e conformidade ambiental." %}
   {% set postUrl = page.url | absoluteUrl(siteUrl) %}
   {% set postImage = coverImage | absoluteUrl(siteUrl) %}
@@ -14,17 +14,17 @@
   <title>{{ postTitle }}</title>
   <meta name="description" content="{{ postDescription }}">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="author" content="{{ author or 'Equipa HIGIDUS' }}">
+  <meta name="author" content="{{ author or 'Equipa Hígidus' }}">
   <meta name="theme-color" content="#0B3B2E">
 
   <link rel="canonical" href="{{ postUrl }}">
   <link rel="alternate" hreflang="pt-pt" href="{{ postUrl }}">
   <link rel="alternate" hreflang="x-default" href="{{ postUrl }}">
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
 
   <meta property="og:type" content="article">
   <meta property="og:locale" content="pt_PT">
-  <meta property="og:site_name" content="HIGIDUS">
+  <meta property="og:site_name" content="Hígidus">
   <meta property="og:title" content="{{ postTitle }}">
   <meta property="og:description" content="{{ postDescription }}">
   <meta property="og:url" content="{{ postUrl }}">
@@ -50,15 +50,15 @@
     "image": "{{ postImage }}",
     "author": {
       "@type": "Person",
-      "name": "{{ (author or 'Equipa HIGIDUS') | escape }}"
+      "name": "{{ (author or 'Equipa Hígidus') | escape }}"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "HIGIDUS",
+      "name": "Hígidus",
       "url": "https://example.com/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://example.com/assets/favicon.svg"
+        "url": "https://example.com/assets/brand/favicon.svg"
       }
     },
     "mainEntityOfPage": {
@@ -69,6 +69,7 @@
     "inLanguage": "pt-PT"
   }
   </script>
+  {% include "partials/faq-schema.njk" %}
 </head>
 <body class="bg-white text-slate-900 antialiased">
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white focus:text-slate-900 focus:px-3 focus:py-2 focus:rounded-md">Saltar para o conteúdo</a>
@@ -82,23 +83,22 @@
   </div>
 
   <main id="main" class="border-b border-slate-200">
-    <section class="relative overflow-hidden border-b border-slate-800 text-white">
+    <section class="blog-post-hero relative overflow-hidden border-b border-slate-800 text-white">
       <img src="{{ coverImage }}" alt="{{ title }}" class="absolute inset-0 h-full w-full object-cover" loading="eager" decoding="async">
-      <div class="blog-grid-overlay absolute inset-0 opacity-30"></div>
-      <div class="absolute inset-0 bg-[linear-gradient(110deg,rgba(2,6,23,0.9)_0%,rgba(11,59,46,0.82)_50%,rgba(2,6,23,0.8)_100%)]"></div>
+      <div class="absolute inset-0 bg-[linear-gradient(110deg,rgba(2,6,23,0.72)_0%,rgba(2,6,23,0.56)_50%,rgba(2,6,23,0.68)_100%)]"></div>
       <div class="relative mx-auto max-w-6xl px-6 py-16 md:py-20">
-        <a href="/blog/" class="inline-flex items-center gap-2 text-sm text-emerald-100 hover:text-white">
+        <a href="/blog/" class="blog-post-hero-backlink inline-flex items-center gap-2 text-sm">
           <i data-lucide="arrow-left" class="h-4 w-4" aria-hidden="true"></i>
           Voltar ao Blog
         </a>
         <div class="mt-6 grid gap-8 lg:grid-cols-12 lg:items-end">
           <div class="lg:col-span-8">
-            <p class="blog-eyebrow text-emerald-100">Blog HIGIDUS</p>
+            <p class="blog-eyebrow">Blog Hígidus</p>
             <h1 class="mt-3 max-w-4xl text-4xl font-semibold leading-[1.08] tracking-tight md:text-6xl">{{ title }}</h1>
             <p class="mt-5 max-w-3xl text-base leading-8 text-emerald-50/90 md:text-[1.12rem]">{{ postDescription }}</p>
             <div class="mt-6 flex flex-wrap items-center gap-2 text-sm text-emerald-50">
               <span class="rounded-full border border-white/25 bg-white/10 px-3 py-1">{{ date | readableDate }}</span>
-              <span class="rounded-full border border-white/25 bg-white/10 px-3 py-1">{{ author or "Equipa HIGIDUS" }}</span>
+              <span class="rounded-full border border-white/25 bg-white/10 px-3 py-1">{{ author or "Equipa Hígidus" }}</span>
               {% if topics and topics.length %}
               {% for topic in topics %}
               <span class="rounded-full border border-white/25 bg-white/10 px-3 py-1">{{ topic }}</span>
