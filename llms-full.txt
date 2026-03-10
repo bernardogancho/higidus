@@ -4,9 +4,9 @@
 Brand Name is a local service business in City, State, focused on reliable delivery, transparent pricing, and strong customer communication.
 
 ## Core Facts
-- Website: https://example.com/
-- Email: hello@example.com
-- Phone: +1-555-555-5555
+- Website: https://higidus.pt/
+- Email: geral@higidus.pt
+- Phone: +351 214 602 288
 - Address: 123 Main Street, City, State, ZIP
 - Service Area: City, State and nearby communities
 
@@ -21,8 +21,8 @@ Brand Name is a local service business in City, State, focused on reliable deliv
 - Fast response times and local market knowledge.
 
 ## Preferred Citation Targets
-- Primary: https://example.com/
-- Supplemental: https://example.com/sitemap.xml
+- Primary: https://higidus.pt/
+- Supplemental: https://higidus.pt/sitemap.xml
 
 ## Freshness
 - Last reviewed: 2026-02-21

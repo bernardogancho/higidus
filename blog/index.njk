@@ -4,11 +4,10 @@ activeNav: blog
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-  {% set siteUrl = "https://example.com" %}
   {% set pageTitle = "Blog | Hígidus" %}
   {% set pageDescription = "Artigos técnicos sobre avaliação de solos, remediação ambiental e conformidade regulatória em Portugal." %}
-  {% set pageUrl = "/blog/" | absoluteUrl(siteUrl) %}
-  {% set pageImage = "/assets/img/hero-about.avif" | absoluteUrl(siteUrl) %}
+  {% set pageUrl = "/blog/" | absoluteUrl(site.url) %}
+  {% set pageImage = "/assets/img/hero-about.avif" | absoluteUrl(site.url) %}
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,14 +47,14 @@ activeNav: blog
     "publisher": {
       "@type": "Organization",
       "name": "Hígidus",
-      "url": "https://example.com/"
+      "url": "{{ site.url }}"
     },
     "blogPost": [
       {% for post in collections.blog %}
       {
         "@type": "BlogPosting",
         "headline": "{{ post.data.title | escape }}",
-        "url": "{{ post.url | absoluteUrl(siteUrl) }}",
+        "url": "{{ post.url | absoluteUrl(site.url) }}",
         "datePublished": "{{ post.date | htmlDateString }}",
         "description": "{{ post.data.description | escape }}"
       }{% if not loop.last %},{% endif %}

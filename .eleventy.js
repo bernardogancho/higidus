@@ -1,3 +1,5 @@
+const site = require("./site.config");
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.ignores.add("404.html");
@@ -17,7 +19,7 @@ module.exports = function (eleventyConfig) {
     return new Date(dateObj).toISOString().slice(0, 10);
   });
 
-  eleventyConfig.addFilter("absoluteUrl", (path, base = "https://example.com") => {
+  eleventyConfig.addFilter("absoluteUrl", (path, base = site.url) => {
     if (!path) return base;
     return new URL(path, base).toString();
   });

@@ -4,4 +4,4 @@ Allow: /
 # Block private paths if you create them later:
 # Disallow: /private/
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://higidus.pt/sitemap.xml

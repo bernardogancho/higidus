@@ -1,54 +1,16 @@
 ---
-activeNav: company
+layout: "layouts/site-page.njk"
+activeNav: "company"
+title: "Sobre Nós | Hígidus"
+description: "Conheça a história da Hígidus: mais de 30 anos de experiência em solos contaminados, do setor energético à construção, indústria e municípios."
+robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+ogDescription: "Nascemos nos postos. Crescemos para Portugal."
+ogImage: "/assets/img/hero-about.avif"
+twitterDescription: "A origem da Hígidus e a experiência técnica que sustenta cada projeto."
+schemaType: "AboutPage"
 ---
-<!DOCTYPE html>
-<html lang="pt-PT">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sobre Nós | Hígidus</title>
-  <meta name="description" content="Conheça a história da Hígidus: mais de 30 anos de experiência em solos contaminados, do setor energético à construção, indústria e municípios.">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="theme-color" content="#0B3B2E">
 
-  <link rel="canonical" href="https://example.com/sobre-nos/">
-  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
-  <link rel="manifest" href="/site.webmanifest">
-
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_PT">
-  <meta property="og:site_name" content="Hígidus">
-  <meta property="og:title" content="Sobre Nós | Hígidus">
-  <meta property="og:description" content="Nascemos nos postos. Crescemos para Portugal.">
-  <meta property="og:url" content="https://example.com/sobre-nos/">
-  <meta property="og:image" content="https://example.com/assets/img/hero-about.avif">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sobre Nós | Hígidus">
-  <meta name="twitter:description" content="A origem da Hígidus e a experiência técnica que sustenta cada projeto.">
-  <meta name="twitter:image" content="https://example.com/assets/img/hero-about.avif">
-  <link rel="stylesheet" href="/assets/styles.css">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "Sobre Nós | Hígidus",
-    "url": "https://example.com/sobre-nos/",
-    "inLanguage": "pt-PT",
-    "dateModified": "2026-02-23"
-  }
-  </script>
-  {% include "partials/faq-schema.njk" %}
-</head>
-<body class="bg-white text-slate-900 antialiased">
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-slate-900">Saltar para o conteúdo</a>
-  <div class="layout-guides" aria-hidden="true"></div>
-
-  {% include "partials/header.njk" %}
-
-  <main id="main">
-    <section class="relative border-b border-slate-200">
+<section class="relative border-b border-slate-200">
       <picture class="block">
         <source srcset="/assets/img/hero-about.avif" type="image/avif">
         <img src="/assets/img/hero-about.avif" alt="Equipa técnica da Hígidus em trabalho de campo" class="h-[420px] w-full object-cover md:h-[520px]">
@@ -181,13 +143,3 @@ activeNav: company
         </div>
       </div>
     </section>
-  </main>
-
-  {% include "partials/footer.njk" %}
-
-  {% include "partials/floating-widgets.njk" %}
-
-  <script src="/assets/vendor/lucide.min.js" defer></script>
-  <script src="/assets/site.js" defer></script>
-</body>
-</html>

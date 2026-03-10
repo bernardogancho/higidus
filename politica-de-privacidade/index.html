@@ -1,26 +1,14 @@
 ---
-activeNav: legal
+layout: "layouts/site-page.njk"
+activeNav: "legal"
+title: "Política de Privacidade | Hígidus"
+description: "Política de privacidade e proteção de dados da Hígidus."
+robots: "index, follow"
+mainClass: "mx-auto max-w-3xl px-6 py-16 md:py-24"
+includeFloatingWidgets: false
 ---
-<!DOCTYPE html>
-<html lang="pt-PT">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Política de Privacidade | Hígidus</title>
-  <meta name="description" content="Política de privacidade e proteção de dados da Hígidus.">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0B3B2E">
-  <link rel="canonical" href="https://example.com/politica-de-privacidade/">
-  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/styles.css">
-  {% include "partials/faq-schema.njk" %}
-</head>
-<body class="bg-white text-slate-900 antialiased">
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-slate-900">Saltar para o conteúdo</a>
-  <div class="layout-guides" aria-hidden="true"></div>
-  {% include "partials/header.njk" %}
-  <main id="main" class="mx-auto max-w-3xl px-6 py-16 md:py-24">
-    <p class="section-kicker">Legal</p>
+
+<p class="section-kicker">Legal</p>
     <h1 class="mt-3 text-4xl font-semibold tracking-tight text-slate-900">Política de Privacidade</h1>
     <p class="mt-6 text-sm leading-7 text-slate-700">
       Na Hígidus, tratamos dados pessoais com transparência e em conformidade com o Regulamento (UE) 2016/679
@@ -159,9 +147,3 @@ activeNav: legal
     </section>
 
     <a href="/" class="mt-10 inline-flex btn btn-primary btn-md">Voltar ao Início</a>
-  </main>
-  {% include "partials/footer.njk" %}
-  <script src="/assets/vendor/lucide.min.js" defer></script>
-  <script src="/assets/site.js" defer></script>
-</body>
-</html>

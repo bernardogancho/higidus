@@ -58,7 +58,7 @@ Generated output is written to `/_site`.
 - per-page `title`, `description`, `canonical`, Open Graph/Twitter meta
 
 ## Replace Before Launch
-1. Replace `https://example.com` with your real domain on all pages.
+1. Production domain is configured via `site.config.js` and CMS `site_url`.
 2. Replace placeholder contact values (`+351 XXX XXX XXX`, emails, `[Morada]`).
 3. Replace placeholder team names and all placeholder SVG images with real photography.
 4. Replace indicative metrics (`+120`, `+60`, etc.) with audited real numbers.

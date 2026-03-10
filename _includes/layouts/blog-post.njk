@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-  {% set siteUrl = "https://example.com" %}
   {% set postTitle = seoTitle or (title ~ " | Blog Hígidus") %}
   {% set postDescription = description or "Insights técnicos sobre solos contaminados, remediação e conformidade ambiental." %}
-  {% set postUrl = page.url | absoluteUrl(siteUrl) %}
-  {% set postImage = coverImage | absoluteUrl(siteUrl) %}
+  {% set postUrl = page.url | absoluteUrl(site.url) %}
+  {% set postImage = coverImage | absoluteUrl(site.url) %}
   {% set postPublished = date | htmlDateString %}
   {% set postUpdated = dateModified | htmlDateString %}
 
@@ -55,10 +54,10 @@
     "publisher": {
       "@type": "Organization",
       "name": "Hígidus",
-      "url": "https://example.com/",
+      "url": "{{ site.url }}",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://example.com/assets/brand/favicon.svg"
+        "url": "{{ '/assets/brand/favicon.svg' | absoluteUrl(site.url) }}"
       }
     },
     "mainEntityOfPage": {

@@ -2,6 +2,9 @@
 headerVariant: home
 activeNav: home
 ---
+{% set homeUrl = "/" | absoluteUrl(site.url) %}
+{% set homeImage = "/assets/img/og-image.svg" | absoluteUrl(site.url) %}
+{% set homeModified = page.date | htmlDateString %}
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
@@ -10,28 +13,28 @@ activeNav: home
   <title>Hígidus | Solos Contaminados, Remediação e Conformidade Ambiental</title>
   <meta name="description" content="Consultoria ambiental especializada em avaliação, remediação e conformidade de solos contaminados. Mobilização em 24h para apoiar obras, indústria e municípios.">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="author" content="Hígidus">
-  <meta name="theme-color" content="#0B3B2E">
+  <meta name="author" content="{{ site.author }}">
+  <meta name="theme-color" content="{{ site.themeColor }}">
   <meta name="format-detection" content="telephone=no">
 
-  <link rel="canonical" href="https://example.com/">
-  <link rel="alternate" hreflang="pt-pt" href="https://example.com/">
-  <link rel="alternate" hreflang="x-default" href="https://example.com/">
+  <link rel="canonical" href="{{ homeUrl }}">
+  <link rel="alternate" hreflang="pt-pt" href="{{ homeUrl }}">
+  <link rel="alternate" hreflang="x-default" href="{{ homeUrl }}">
   <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="/site.webmanifest">
 
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_PT">
-  <meta property="og:site_name" content="Hígidus">
+  <meta property="og:locale" content="{{ site.locale }}">
+  <meta property="og:site_name" content="{{ site.name }}">
   <meta property="og:title" content="Hígidus | Solos Contaminados, Remediação e Conformidade Ambiental">
   <meta property="og:description" content="Diagnóstico, remediação e conformidade ambiental.">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:image" content="https://example.com/assets/img/og-image.svg">
+  <meta property="og:url" content="{{ homeUrl }}">
+  <meta property="og:image" content="{{ homeImage }}">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hígidus | Solos Contaminados, Remediação e Conformidade Ambiental">
   <meta name="twitter:description" content="Mobilização em 24h para avaliação e tratamento de solos contaminados.">
-  <meta name="twitter:image" content="https://example.com/assets/img/og-image.svg">
+  <meta name="twitter:image" content="{{ homeImage }}">
 
   <meta name="geo.region" content="PT-11">
   <meta name="geo.placename" content="Lisboa">
@@ -43,9 +46,10 @@ activeNav: home
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Hígidus",
-    "url": "https://example.com/",
-    "logo": "https://example.com/assets/brand/favicon.svg",
+    "name": "{{ site.legalName }}",
+    "url": "{{ site.url }}",
+    "logo": "{{ '/assets/brand/favicon.svg' | absoluteUrl(site.url) }}",
+    "sameAs": ["{{ site.social.linkedin }}"],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "R. das Fisgas 442 Armazém 5",
@@ -57,8 +61,8 @@ activeNav: home
       {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "email": "geral@higidus.pt",
-        "telephone": "+351214602288",
+        "email": "{{ site.contact.email }}",
+        "telephone": "{{ site.contact.phone }}",
         "areaServed": "PT"
       }
     ]
@@ -68,9 +72,9 @@ activeNav: home
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Hígidus",
-    "url": "https://example.com/",
-    "inLanguage": "pt-PT"
+    "name": "{{ site.name }}",
+    "url": "{{ site.url }}",
+    "inLanguage": "{{ site.language }}"
   }
   </script>
   <script type="application/ld+json">
@@ -78,9 +82,9 @@ activeNav: home
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Hígidus | Solos Contaminados, Remediação e Conformidade Ambiental",
-    "url": "https://example.com/",
-    "inLanguage": "pt-PT",
-    "dateModified": "2026-02-23"
+    "url": "{{ homeUrl }}",
+    "inLanguage": "{{ site.language }}",
+    "dateModified": "{{ homeModified }}"
   }
   </script>
   <script type="application/ld+json">
