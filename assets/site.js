@@ -17,6 +17,8 @@
       toggle.addEventListener("click", function () {
         var isOpen = menu.classList.toggle("is-open");
         toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        toggle.classList.toggle("is-open", isOpen);
+        toggle.setAttribute("aria-label", isOpen ? "Fechar menu principal" : "Abrir menu principal");
       });
     });
   }

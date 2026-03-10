@@ -12,6 +12,17 @@
   {% set pageTwitterImage = (twitterImage or ogImage or '/assets/img/og-image.svg') | absoluteUrl(site.url) %}
   {% set pageRobots = robots or 'index, follow' %}
   {% set pageModified = (dateModified or page.date) | htmlDateString %}
+  {% set breadcrumbCurrent = (breadcrumbTitle or title) | replace(" | Hígidus", "") %}
+  {% set breadcrumbSectionLabel = "" %}
+  {% set breadcrumbSectionUrl = "" %}
+  {% if page.url.startsWith('/servicos/') %}
+    {% set breadcrumbSectionLabel = "Serviços" %}
+  {% elif page.url.startsWith('/setores/') %}
+    {% set breadcrumbSectionLabel = "Setores" %}
+  {% elif page.url.startsWith('/blog/') %}
+    {% set breadcrumbSectionLabel = "Blog" %}
+    {% set breadcrumbSectionUrl = "/blog/" %}
+  {% endif %}
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,7 +74,38 @@
     "dateModified": "{{ pageModified }}"{% endif %}
   }
   </script>
-  {% include "partials/faq-schema.njk" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Início",
+        "item": "{{ '/' | absoluteUrl(site.url) }}"
+      }{% if breadcrumbSectionLabel %},
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": {{ breadcrumbSectionLabel | json | safe }}{% if breadcrumbSectionUrl %},
+        "item": "{{ breadcrumbSectionUrl | absoluteUrl(site.url) }}"{% endif %}
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": {{ breadcrumbCurrent | json | safe }},
+        "item": "{{ canonicalUrl }}"
+      }{% else %},
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": {{ breadcrumbCurrent | json | safe }},
+        "item": "{{ canonicalUrl }}"
+      }{% endif %}
+    ]
+  }
+  </script>
 </head>
 <body class="{{ bodyClass or 'bg-white text-slate-900 antialiased' }}">
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-slate-900">Saltar para o conteúdo</a>
@@ -74,6 +116,9 @@
   {% include "partials/header.njk" %}
 
   <main id="main" {% if mainClass %}class="{{ mainClass }}"{% endif %}>
+    {% if page.url != '/' %}
+    {% include "partials/breadcrumbs.njk" %}
+    {% endif %}
     {{ content | safe }}
   </main>
 

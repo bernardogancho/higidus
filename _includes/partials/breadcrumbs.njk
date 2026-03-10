@@ -1,0 +1,22 @@
+{% set breadcrumbThemeClass = " site-breadcrumbs--dark" if breadcrumbTheme == "dark" else "" %}
+<nav class="site-breadcrumbs{{ breadcrumbThemeClass }}" aria-label="Breadcrumb">
+  <div class="mx-auto max-w-7xl px-6">
+    <ol class="site-breadcrumbs-list">
+      <li class="site-breadcrumbs-item">
+        <a href="/" class="site-breadcrumbs-link">Início</a>
+      </li>
+      {% if breadcrumbSectionLabel %}
+      <li class="site-breadcrumbs-item">
+        {% if breadcrumbSectionUrl %}
+        <a href="{{ breadcrumbSectionUrl }}" class="site-breadcrumbs-link">{{ breadcrumbSectionLabel }}</a>
+        {% else %}
+        <span class="site-breadcrumbs-label">{{ breadcrumbSectionLabel }}</span>
+        {% endif %}
+      </li>
+      {% endif %}
+      <li class="site-breadcrumbs-item" aria-current="page">
+        <span class="site-breadcrumbs-current">{{ breadcrumbCurrent }}</span>
+      </li>
+    </ol>
+  </div>
+</nav>

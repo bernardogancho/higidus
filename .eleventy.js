@@ -24,6 +24,8 @@ module.exports = function (eleventyConfig) {
     return new URL(path, base).toString();
   });
 
+  eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
+
   eleventyConfig.addCollection("blog", (collectionApi) => {
     return collectionApi
       .getFilteredByTag("blog")

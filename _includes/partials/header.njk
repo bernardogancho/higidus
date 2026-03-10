@@ -28,17 +28,26 @@
       <a href="/" data-header-logo aria-label="Hígidus" class="inline-flex shrink-0 items-center">
         <img src="/assets/brand/higidus-icon.svg" alt="Hígidus" class="h-6 w-auto md:h-7" loading="eager" decoding="async">
       </a>
-      <button type="button" data-header-menu-button data-mobile-toggle="mobile-menu-main" aria-expanded="false" aria-controls="mobile-menu-main" class="btn btn-secondary btn-md shrink-0 lg:hidden">Menu</button>
+      <div class="flex shrink-0 items-center gap-2 lg:hidden">
+        <a href="/contacto/" aria-label="Contacto" class="btn btn-inverse btn-md header-mobile-contact {{ 'ring-2 ring-white/35' if nav == 'contact' else '' }}" {% if nav == 'contact' %}aria-current="page"{% endif %}>Contacto</a>
+        <button type="button" data-header-menu-button data-mobile-toggle="mobile-menu-main" aria-expanded="false" aria-controls="mobile-menu-main" aria-label="Abrir menu principal" class="header-menu-toggle shrink-0">
+        <span class="header-menu-toggle-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        </button>
+      </div>
       <nav class="site-nav hidden min-w-0 lg:flex lg:flex-1 lg:justify-center" aria-label="Principal">
         <ul class="flex h-16 items-stretch gap-6 text-sm font-medium text-slate-800">
           {% for item in navItems %}
           {% if item.desktop %}
           {% if item.key == "services" %}
           <li class="nav-parent flex items-center">
-            <a data-header-link class="nav-top-link {{ 'is-active' if nav == item.key else '' }}" href="{{ item.href }}" {% if nav == item.key %}aria-current="page"{% endif %}>
+            <button type="button" data-header-link class="nav-top-link {{ 'is-active' if nav == item.key else '' }}" aria-haspopup="true" aria-expanded="false">
               <span>{{ item.label }}</span>
               <i data-lucide="chevron-down" class="nav-chevron h-3.5 w-3.5" aria-hidden="true"></i>
-            </a>
+            </button>
             <div class="nav-dropdown nav-dropdown-full absolute left-0 right-0 top-full z-50">
               <div class="border-b border-t border-slate-200 bg-white shadow-[0_10px_18px_rgba(15,23,42,0.06)]">
                 <div class="grid grid-cols-4 gap-2 p-2">
@@ -57,10 +66,10 @@
           </li>
           {% elseif item.key == "sectors" %}
           <li class="nav-parent flex items-center">
-            <a data-header-link class="nav-top-link {{ 'is-active' if nav == item.key else '' }}" href="{{ item.href }}" {% if nav == item.key %}aria-current="page"{% endif %}>
+            <button type="button" data-header-link class="nav-top-link {{ 'is-active' if nav == item.key else '' }}" aria-haspopup="true" aria-expanded="false">
               <span>{{ item.label }}</span>
               <i data-lucide="chevron-down" class="nav-chevron h-3.5 w-3.5" aria-hidden="true"></i>
-            </a>
+            </button>
             <div class="nav-dropdown nav-dropdown-full absolute left-0 right-0 top-full z-50">
               <div class="border-b border-t border-slate-200 bg-white shadow-[0_10px_18px_rgba(15,23,42,0.06)]">
                 <div class="grid grid-cols-4 gap-2 p-2">
@@ -97,7 +106,31 @@
     <div class="grid gap-2 text-sm font-medium text-slate-800">
       {% for item in navItems %}
       {% if item.mobile %}
-      <a class="rounded-md px-3 py-2 {{ 'bg-[#0B3B2E]/10 text-[#0B3B2E]' if nav == item.key else 'hover:bg-slate-100' }}" href="{{ item.href }}" {% if nav == item.key %}aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% if item.key == "services" %}
+      <details class="mobile-nav-group">
+        <summary class="mobile-nav-summary">
+          <span>{{ item.label }}</span>
+        </summary>
+        <div class="mobile-nav-panel">
+          {% for service in serviceItems %}
+          <a class="mobile-nav-child" href="{{ service.href }}" {% if currentPath == service.href %}aria-current="page"{% endif %}>{{ service.label }}</a>
+          {% endfor %}
+        </div>
+      </details>
+      {% elseif item.key == "sectors" %}
+      <details class="mobile-nav-group">
+        <summary class="mobile-nav-summary">
+          <span>{{ item.label }}</span>
+        </summary>
+        <div class="mobile-nav-panel">
+          {% for sector in sectorItems %}
+          <a class="mobile-nav-child" href="{{ sector.href }}" {% if currentPath == sector.href %}aria-current="page"{% endif %}>{{ sector.label }}</a>
+          {% endfor %}
+        </div>
+      </details>
+      {% else %}
+      <a class="rounded-md px-3 py-2 hover:bg-slate-100" href="{{ item.href }}" {% if nav == item.key %}aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% endif %}
       {% endif %}
       {% endfor %}
       <a class="btn btn-primary btn-md justify-center {{ 'ring-2 ring-[#0B3B2E]/30' if nav == 'contact' else '' }}" href="/contacto/" {% if nav == 'contact' %}aria-current="page"{% endif %}>Contacto</a>

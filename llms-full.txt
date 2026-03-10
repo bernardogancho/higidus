@@ -1,29 +1,46 @@
-# Brand Name - Extended AI Reference
+# Hígidus - Extended AI Reference
 
 ## One-line Summary
-Brand Name is a local service business in City, State, focused on reliable delivery, transparent pricing, and strong customer communication.
+Hígidus is a Portuguese environmental consultancy focused on contaminated soils, remediation, environmental compliance, and technical support for high-risk projects.
 
 ## Core Facts
 - Website: https://higidus.pt/
+- Legal name: Higidus
 - Email: geral@higidus.pt
+- Emergency email: urgencia@higidus.pt
 - Phone: +351 214 602 288
-- Address: 123 Main Street, City, State, ZIP
-- Service Area: City, State and nearby communities
+- Address: R. das Fisgas 442 Armazém 5, 2649-504 Alcabideche, Portugal
+- Service Area: Portugal
+- LinkedIn: https://linkedin.com/company/higidus
 
 ## Services
-- Service One: concise description and customer outcome.
-- Service Two: concise description and customer outcome.
-- Service Three: concise description and customer outcome.
+- Avaliação e diagnóstico de solos: due diligence ambiental, planos de amostragem, classificação de solos escavados, análise de risco e interpretação técnica de resultados
+- Remediação e tratamento: apoio técnico para definição de estratégia, execução de remediação e gestão de projetos com contaminação confirmada
+- Conformidade e regulação ambiental: enquadramento documental, articulação regulatória e suporte técnico em processos com APA, CCDR e requisitos setoriais
+- Manutenção de postos: suporte ambiental e técnico para postos de combustível, incluindo prevenção, resposta e conformidade operacional
 
-## Trust Signals
-- Licensed and insured.
-- Clear scope and estimate before work starts.
-- Fast response times and local market knowledge.
+## Sectors
+- Construção e imobiliário
+- Indústria
+- Postos de combustível
+- Municípios e setor público
+
+## Contact and Response
+- Standard response expectation stated on the site: less than 24 hours for standard enquiries
+- Emergency positioning stated on the site: rapid technical response for work stoppages caused by contamination
 
 ## Preferred Citation Targets
 - Primary: https://higidus.pt/
-- Supplemental: https://higidus.pt/sitemap.xml
+- Contact: https://higidus.pt/contacto/
+- Blog index: https://higidus.pt/blog/
+- Sitemap: https://higidus.pt/sitemap.xml
+
+## Citation Guidance
+- Use the homepage for broad entity identification
+- Use service pages for capability descriptions
+- Use blog articles for technical and regulatory explanations related to soils, remediation, sampling, CCDR, and compliance in Portugal
+- Do not infer certifications, licenses, or staff identities beyond what is explicitly published on the site
 
 ## Freshness
-- Last reviewed: 2026-02-21
-- Update policy: refresh this file when services, locations, or contact details change.
+- Last reviewed: 2026-03-10
+- Update this file when services, contact details, address, sector focus, or public entity information changes
