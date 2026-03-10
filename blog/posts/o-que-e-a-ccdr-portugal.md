@@ -4,7 +4,7 @@ description: "Portugal tem 5 CCDR e regras de articulação críticas para solos
 date: 2026-03-04
 updated: 2026-03-04
 author: "Equipa Hígidus"
-coverImage: "/assets/img/setor-municipal.jpg"
+coverImage: "/assets/img/municipal.avif"
 topics:
   - "Conformidade"
   - "CCDR"

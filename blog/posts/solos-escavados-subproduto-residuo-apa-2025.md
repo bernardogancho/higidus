@@ -4,7 +4,7 @@ description: "Com 69% dos locais investigados na Europa confirmados como contami
 date: 2026-03-04
 updated: 2026-03-04
 author: "Equipa Hígidus"
-coverImage: "/assets/img/setor-construcao.jpg"
+coverImage: "/assets/img/construction.avif"
 topics:
   - "Avaliação"
   - "Conformidade"

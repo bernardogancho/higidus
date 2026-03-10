@@ -10,15 +10,16 @@
   { "key": "blog", "label": "Blog", "href": "/blog/", "desktop": true, "mobile": true }
 ] %}
 {% set serviceItems = [
-  { "href": "/servicos/avaliacao-diagnostico/", "label": "Avaliação e Diagnóstico", "description": "Classificação, amostragem e análise de risco.", "image": "/assets/img/service-diagnostico-card.jpg", "alt": "Avaliação e Diagnóstico de Solos" },
-  { "href": "/servicos/remediacao-tratamento/", "label": "Remediação e Tratamento", "description": "Soluções in situ e ex situ para descontaminação.", "image": "/assets/img/projeto-1.jpg", "alt": "Remediação e Tratamento de Solos" },
-  { "href": "/servicos/conformidade-regulacao/", "label": "Conformidade e Regulação", "description": "Licenciamento, monitorização e documentação.", "image": "/assets/img/projeto-2.jpg", "alt": "Conformidade e Regulação Ambiental" }
+  { "href": "/servicos/avaliacao-diagnostico/", "label": "Avaliação e Diagnóstico", "description": "Classificação, amostragem e análise de risco.", "image": "/assets/img/higidus-imagem.avif", "alt": "Avaliação e Diagnóstico de Solos" },
+  { "href": "/servicos/remediacao-tratamento/", "label": "Remediação e Tratamento", "description": "Soluções in situ e ex situ para descontaminação.", "image": "/assets/img/soil-fixes.avif", "alt": "Remediação e Tratamento de Solos" },
+  { "href": "/servicos/conformidade-regulacao/", "label": "Conformidade e Regulação", "description": "Licenciamento, monitorização e documentação.", "image": "/assets/img/conformidade.avif", "alt": "Conformidade e Regulação Ambiental" },
+  { "href": "/servicos/manutencao-postos/", "label": "Manutenção de Postos", "description": "Inspeção, prevenção e controlo técnico contínuo.", "image": "/assets/img/gas-station-mom.avif", "alt": "Manutenção de Postos de Combustível" }
 ] %}
 {% set sectorItems = [
-  { "href": "/setores/construcao/", "label": "Construção", "description": "Escavação e gestão de solos em obra.", "image": "/assets/img/setor-construcao.jpg", "alt": "Setor da Construção" },
-  { "href": "/setores/industria/", "label": "Indústria", "description": "Reabilitação de passivos industriais.", "image": "/assets/img/setor-industria.jpg", "alt": "Setor da Indústria" },
-  { "href": "/setores/postos-de-combustivel/", "label": "Postos de Combustível", "description": "Gestão ambiental e conformidade contínua.", "image": "/assets/img/setor-postos.jpg", "alt": "Setor de Postos de Combustível" },
-  { "href": "/setores/municipal/", "label": "Municipal", "description": "Projetos urbanos e apoio técnico regulatório.", "image": "/assets/img/setor-municipal.jpg", "alt": "Setor Municipal" }
+  { "href": "/setores/construcao/", "label": "Construção", "description": "Escavação e gestão de solos em obra.", "image": "/assets/img/construction.avif", "alt": "Setor da Construção" },
+  { "href": "/setores/industria/", "label": "Indústria", "description": "Reabilitação de passivos industriais.", "image": "/assets/img/industry.avif", "alt": "Setor da Indústria" },
+  { "href": "/setores/postos-de-combustivel/", "label": "Postos de Combustível", "description": "Gestão ambiental e conformidade contínua.", "image": "/assets/img/gas-station-pump.avif", "alt": "Setor de Postos de Combustível" },
+  { "href": "/setores/municipal/", "label": "Municipal", "description": "Projetos urbanos e apoio técnico regulatório.", "image": "/assets/img/municipal.avif", "alt": "Setor Municipal" }
 ] %}
 
 <header data-site-header class="site-header sticky top-0 z-50 border-b backdrop-blur">
@@ -40,7 +41,7 @@
             </a>
             <div class="nav-dropdown nav-dropdown-full absolute left-0 right-0 top-full z-50">
               <div class="border-b border-t border-slate-200 bg-white shadow-[0_10px_18px_rgba(15,23,42,0.06)]">
-                <div class="grid grid-cols-3 gap-2 p-2">
+                <div class="grid grid-cols-4 gap-2 p-2">
                   {% for service in serviceItems %}
                   <a href="{{ service.href }}" class="group block rounded-md border border-slate-200 {{ 'bg-[#0B3B2E]/5' if currentPath == service.href else 'hover:bg-slate-50' }}" {% if currentPath == service.href %}aria-current="page"{% endif %}>
                     <img src="{{ service.image }}" alt="{{ service.alt }}" class="h-32 w-full rounded-t-md object-cover object-center" loading="lazy" decoding="async">

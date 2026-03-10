@@ -4,7 +4,7 @@ description: "A EEA usa 100.000€ por local como referência em cenários de re
 date: 2026-03-04
 updated: 2026-03-04
 author: "Equipa Hígidus"
-coverImage: "/assets/img/projeto-2.jpg"
+coverImage: "/assets/img/conformidade.avif"
 topics:
   - "Remediação"
   - "Custos"

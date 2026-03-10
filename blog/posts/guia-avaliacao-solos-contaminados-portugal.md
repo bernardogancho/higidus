@@ -3,7 +3,7 @@ title: "Guia Completo: Avaliação de Solos Contaminados em Portugal"
 description: "Guia técnico das 3 fases APA (2022) para avaliação de solos contaminados: plano de amostragem, ISO 17025, subproduto vs resíduo e gestão de risco regulatório."
 date: 2026-03-04
 author: "Equipa Hígidus"
-coverImage: "/assets/img/service-diagnostico-card.jpg"
+coverImage: "/assets/img/service-diagnostico-card.avif"
 topics:
   - "Avaliação"
   - "Conformidade"

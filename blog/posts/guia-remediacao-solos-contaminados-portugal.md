@@ -4,7 +4,7 @@ description: "A EEA estima 2,8 milhões de locais potencialmente contaminados na
 date: 2026-03-04
 updated: 2026-03-04
 author: "Equipa Hígidus"
-coverImage: "/assets/img/setor-postos.jpg"
+coverImage: "/assets/img/gas-station-pump.avif"
 topics:
   - "Remediação"
   - "Tratamento"

@@ -124,7 +124,7 @@ activeNav: home
   }
   </script>
 </head>
-<body data-guides-from="servicos" class="bg-white text-slate-900 antialiased">
+<body data-guides-from="post-hero-guides-start" class="bg-white text-slate-900 antialiased">
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white focus:text-slate-900 focus:px-3 focus:py-2 focus:rounded-md">Saltar para o conteúdo</a>
   <div class="layout-guides" aria-hidden="true"></div>
 
@@ -133,13 +133,13 @@ activeNav: home
   <main id="main">
     <section class="relative isolate min-h-[100svh] overflow-hidden border-b border-slate-200 bg-slate-950 text-white">
       <div class="pointer-events-none absolute inset-0">
-        <img src="/assets/img/hero-poster-firstframe.avif" alt="" aria-hidden="true" width="1600" height="900" loading="eager" fetchpriority="high" decoding="async" class="h-full w-full object-cover" style="object-position: center 40%;">
+        <img src="/assets/img/real-hero.avif" alt="" aria-hidden="true" width="5504" height="3072" loading="eager" fetchpriority="high" decoding="async" class="h-full w-full object-cover" style="object-position: center 20%;">
         <div class="absolute inset-0 bg-black/35"></div>
         <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.2)_0%,rgba(2,6,23,0.26)_36%,rgba(2,6,23,0.76)_100%)]"></div>
       </div>
 
-      <div class="relative mx-auto flex min-h-[100svh] max-w-5xl items-end justify-center px-6 pb-[20svh] pt-32 text-center md:pb-[24svh] md:pt-40">
-        <div class="max-w-4xl">
+      <div class="relative mx-auto flex min-h-[100svh] max-w-5xl items-end justify-center px-6 pb-[20svh] pt-32 text-left md:pb-[24svh] md:pt-40 md:text-center">
+        <div class="max-w-4xl -translate-y-[20svh] md:translate-y-0">
           <p class="inline-flex rounded-full border border-white/30 bg-black/25 px-4 py-1.5 text-[0.9rem] font-semibold uppercase tracking-[0.18em] text-emerald-100 md:text-[1rem]">
             Mobilização em 24h
           </p>
@@ -147,109 +147,57 @@ activeNav: home
             Diagnóstico, remediação e
             conformidade ambiental.
           </h1>
-          <p class="mx-auto mt-5 max-w-3xl text-base leading-8 text-emerald-50/95 md:text-2xl md:leading-relaxed">
+          <p class="mt-5 max-w-3xl text-base leading-8 text-emerald-50/95 md:mx-auto md:text-2xl md:leading-relaxed">
             Especialistas em solos contaminados: execução no terreno, decisão técnica e conformidade regulatória.
           </p>
-          <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <div class="btn-group-responsive mt-8 md:mx-auto md:justify-center">
             <a href="/contacto/?servico=avaliacao" class="btn btn-primary btn-md md:text-base">Pedir Avaliação</a>
             <a href="/sobre-nos/" class="btn btn-outline-light btn-md md:text-base">Conhecer a Hígidus</a>
           </div>
         </div>
       </div>
-      <div id="hero-sectors-bar" class="relative z-10 border-t border-slate-200 bg-white">
-        <div class="logo-marquee mx-auto max-w-7xl px-6 py-4">
-          <div class="logo-track">
-            <ul class="logo-set" aria-label="Logótipos de clientes de referência">
-              <li class="logo-item"><img src="/assets/img/logos/galp.svg" alt="Galp" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/repsol.svg" alt="Repsol" class="logo-repsol" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/bp-new.svg" alt="BP" class="logo-bp" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/prio.png" alt="PRIO" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/moeve.svg" alt="Moeve" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/gaspe.jpg" alt="Gaspe" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/tfuel.png" alt="Tfuel" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/eco-oil.png" alt="Eco-Oil" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/auchan.svg" alt="Auchan" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/intermarche.svg" alt="Intermarché" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/e-leclerc.svg" alt="E.Leclerc" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/mota-engil.svg" alt="Mota-Engil" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/teixeira-duarte.png" alt="Teixeira Duarte" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/casais.svg" alt="Casais" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/efacec.svg" alt="Efacec" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/infraestruturas-portugal.svg" alt="Infraestruturas de Portugal" loading="lazy" decoding="async"></li>
-            </ul>
-            <ul class="logo-set" aria-hidden="true">
-              <li class="logo-item"><img src="/assets/img/logos/galp.svg" alt="" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/repsol.svg" alt="" class="logo-repsol" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/bp-new.svg" alt="" class="logo-bp" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/prio.png" alt="" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/moeve.svg" alt="" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/gaspe.jpg" alt="" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/tfuel.png" alt="" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/eco-oil.png" alt="" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/auchan.svg" alt="" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/intermarche.svg" alt="" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/e-leclerc.svg" alt="" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/mota-engil.svg" alt="" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/teixeira-duarte.png" alt="" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/casais.svg" alt="" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/efacec.svg" alt="" loading="lazy" decoding="async"></li>
-              <li class="logo-item"><img src="/assets/img/logos/infraestruturas-portugal.svg" alt="" loading="lazy" decoding="async"></li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section id="servicos" class="border-b border-slate-200 bg-white">
-      <div class="mx-auto max-w-7xl px-6 py-16 md:py-20">
-        <div class="max-w-4xl">
-          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#0B3B2E]">Especialização Técnica</p>
-          <h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-900 md:text-5xl">Linhas de Serviço</h2>
-          <p class="mt-4 text-base leading-8 text-slate-600 md:text-[1.75rem] md:leading-[1.35]">
-            Soluções técnicas completas para diagnosticar, remediar e garantir conformidade ambiental em qualquer fase do seu projeto.
-          </p>
-          <div class="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-slate-700">
-            <a href="/projetos/" class="underline underline-offset-4 hover:text-[#0B3B2E]">Projetos e Referências</a>
-            <a href="/certificacoes/" class="underline underline-offset-4 hover:text-[#0B3B2E]">Certificações e Acreditações</a>
-          </div>
-        </div>
-
-        <div id="service-card-grid" class="mt-10 grid gap-6 md:grid-cols-3" role="list">
-          <a href="/servicos/avaliacao-diagnostico/" class="action-card group">
-            <div class="mb-4 flex items-start justify-between gap-3">
-              <h3 class="text-xl font-semibold leading-tight text-slate-900">Avaliação e Diagnóstico de Solos</h3>
-              <i data-lucide="arrow-up-right" class="action-card-icon" aria-hidden="true"></i>
-            </div>
-            <p class="mb-4 text-sm leading-6 text-slate-600">Sabemos onde recolher, o que procurar e como interpretar. Planos de amostragem, classificação de solos escavados e análise de risco conforme o Guia Técnico da APA.</p>
-            <picture class="block">
-              <source srcset="/assets/img/service-diagnostico-card.avif" type="image/avif">
-              <img src="/assets/img/service-diagnostico-card.jpg" alt="Avaliação técnica de solo em campo" class="h-72 w-full rounded-md object-cover" loading="lazy" decoding="async">
-            </picture>
-          </a>
-
-          <a href="/servicos/remediacao-tratamento/" class="action-card group">
-            <div class="mb-4 flex items-start justify-between gap-3">
-              <h3 class="text-xl font-semibold leading-tight text-slate-900">Remediação e Tratamento de Solos</h3>
-              <i data-lucide="arrow-up-right" class="action-card-icon" aria-hidden="true"></i>
-            </div>
-            <p class="mb-4 text-sm leading-6 text-slate-600">De hidrocarbonetos a metais pesados, projetamos e executamos soluções de remediação in situ e ex situ. Do diagnóstico à descontaminação total.</p>
-            <picture class="block">
-              <source srcset="/assets/img/projeto-1.avif" type="image/avif">
-              <img src="/assets/img/projeto-1.jpg" alt="Remediação e tratamento de solo contaminado" class="h-72 w-full rounded-md object-cover" loading="lazy" decoding="async">
-            </picture>
-          </a>
-
-          <a href="/servicos/conformidade-regulacao/" class="action-card group">
-            <div class="mb-4 flex items-start justify-between gap-3">
-              <h3 class="text-xl font-semibold leading-tight text-slate-900">Conformidade e Regulação</h3>
-              <i data-lucide="arrow-up-right" class="action-card-icon" aria-hidden="true"></i>
-            </div>
-            <p class="mb-4 text-sm leading-6 text-slate-600">Navegamos os processos da APA, CCDR e Câmaras Municipais. Licenciamento, AIA, monitorização e toda a documentação regulatória para o seu projeto avançar.</p>
-            <picture class="block">
-              <source srcset="/assets/img/projeto-2.avif" type="image/avif">
-              <img src="/assets/img/projeto-2.jpg" alt="Conformidade e regulação ambiental para obras" class="h-72 w-full rounded-md object-cover" loading="lazy" decoding="async">
-            </picture>
-          </a>
+    <div id="post-hero-guides-start" aria-hidden="true"></div>
+    <section id="hero-sectors-bar" class="relative z-10 border-b border-slate-200 bg-white">
+      <div class="logo-marquee mx-auto max-w-7xl px-6 py-4">
+        <div class="logo-track">
+          <ul class="logo-set" aria-label="Logótipos de clientes de referência">
+            <li class="logo-item"><img src="/assets/img/logos/galp.svg" alt="Galp" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/repsol.svg" alt="Repsol" class="logo-repsol" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/bp-new.svg" alt="BP" class="logo-bp" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/prio.avif" alt="PRIO" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/moeve.svg" alt="Moeve" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/gaspe.avif" alt="Gaspe" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/tfuel.avif" alt="Tfuel" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/eco-oil.avif" alt="Eco-Oil" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/auchan.svg" alt="Auchan" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/intermarche.svg" alt="Intermarché" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/e-leclerc.svg" alt="E.Leclerc" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/mota-engil.svg" alt="Mota-Engil" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/teixeira-duarte.avif" alt="Teixeira Duarte" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/casais.svg" alt="Casais" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/efacec.svg" alt="Efacec" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/infraestruturas-portugal.svg" alt="Infraestruturas de Portugal" loading="lazy" decoding="async"></li>
+          </ul>
+          <ul class="logo-set" aria-hidden="true">
+            <li class="logo-item"><img src="/assets/img/logos/galp.svg" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/repsol.svg" alt="" class="logo-repsol" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/bp-new.svg" alt="" class="logo-bp" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/prio.avif" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/moeve.svg" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/gaspe.avif" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/tfuel.avif" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/eco-oil.avif" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/auchan.svg" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/intermarche.svg" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/e-leclerc.svg" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/mota-engil.svg" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/teixeira-duarte.avif" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/casais.svg" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/efacec.svg" alt="" loading="lazy" decoding="async"></li>
+            <li class="logo-item"><img src="/assets/img/logos/infraestruturas-portugal.svg" alt="" loading="lazy" decoding="async"></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -269,8 +217,93 @@ activeNav: home
           </div>
           <picture class="block lg:col-span-5">
             <source srcset="/assets/img/empresa-teaser.avif" type="image/avif">
-            <img src="/assets/img/empresa-teaser.jpg" alt="Representante da equipa Hígidus" class="h-64 w-full rounded-md object-cover shadow-sm md:h-72" loading="lazy" decoding="async">
+            <img src="/assets/img/empresa-teaser.avif" alt="Representante da equipa Hígidus" class="h-64 w-full rounded-md object-cover shadow-sm md:h-72" loading="lazy" decoding="async">
           </picture>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos-urgentes" class="border-b border-slate-200 bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-12 md:py-14">
+        <div class="relative overflow-hidden rounded-md border border-[#0B3B2E]/20 p-8 text-white md:p-10">
+          <img src="/assets/img/ambulance.avif" alt="" class="absolute inset-0 h-full w-full object-cover object-[65%_center]" loading="lazy" decoding="async" aria-hidden="true">
+          <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(3, 12, 10, 0.92) 0%, rgba(7, 30, 24, 0.88) 34%, rgba(11, 59, 46, 0.62) 58%, rgba(11, 59, 46, 0.18) 100%);" aria-hidden="true"></div>
+          <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.34) 0%, rgba(0, 0, 0, 0.46) 100%);" aria-hidden="true"></div>
+          <div class="relative z-10 max-w-3xl">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-100">Resposta Rápida</p>
+            <h2 class="mt-3 max-w-3xl text-3xl font-semibold tracking-tight md:text-5xl">Serviços urgentes, conseguimos mobilizar em 24 horas</h2>
+            <p class="mt-4 max-w-2xl text-base leading-8 text-emerald-100">Apoiamos situações críticas em obra, postos de combustível, indústria e contexto municipal com resposta técnica rápida.</p>
+            <div class="btn-group-responsive mt-7">
+              <a href="tel:+351214602288" class="btn btn-inverse btn-md">Ligar Agora</a>
+              <a href="/contacto/?servico=remediacao" class="btn btn-outline-light btn-md">Pedir Contacto Técnico</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="border-b border-slate-200 bg-[#f6f8fc]">
+      <div class="mx-auto max-w-7xl px-6 py-16 md:py-20">
+        <div class="max-w-4xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#0B3B2E]">Especialização Técnica</p>
+          <h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-900 md:text-5xl">Linhas de Serviço</h2>
+          <p class="mt-4 text-base leading-8 text-slate-600 md:text-[1.75rem] md:leading-[1.35]">
+            Soluções técnicas completas para diagnosticar, remediar e garantir conformidade ambiental em qualquer fase do seu projeto.
+          </p>
+          <div class="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-slate-700">
+            <a href="/projetos/" class="underline underline-offset-4 hover:text-[#0B3B2E]">Projetos e Referências</a>
+            <a href="/certificacoes/" class="underline underline-offset-4 hover:text-[#0B3B2E]">Certificações e Acreditações</a>
+          </div>
+        </div>
+
+        <div id="service-card-grid" class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4" role="list">
+          <a href="/servicos/avaliacao-diagnostico/" class="action-card group">
+            <div class="mb-4 flex items-start justify-between gap-3">
+              <h3 class="text-xl font-semibold leading-tight text-slate-900">Avaliação e Diagnóstico de Solos</h3>
+              <i data-lucide="arrow-up-right" class="action-card-icon" aria-hidden="true"></i>
+            </div>
+            <p class="mb-4 text-sm leading-6 text-slate-600">Sabemos onde recolher, o que procurar e como interpretar. Planos de amostragem, classificação de solos escavados e análise de risco conforme o Guia Técnico da APA.</p>
+            <picture class="block">
+              <source srcset="/assets/img/higidus-imagem.avif" type="image/avif">
+              <img src="/assets/img/higidus-imagem.avif" alt="Avaliação técnica de solo em campo" class="h-72 w-full rounded-md object-cover" loading="lazy" decoding="async">
+            </picture>
+          </a>
+
+          <a href="/servicos/remediacao-tratamento/" class="action-card group">
+            <div class="mb-4 flex items-start justify-between gap-3">
+              <h3 class="text-xl font-semibold leading-tight text-slate-900">Remediação e Tratamento de Solos</h3>
+              <i data-lucide="arrow-up-right" class="action-card-icon" aria-hidden="true"></i>
+            </div>
+            <p class="mb-4 text-sm leading-6 text-slate-600">De hidrocarbonetos a metais pesados, projetamos e executamos soluções de remediação in situ e ex situ. Do diagnóstico à descontaminação total.</p>
+            <picture class="block">
+              <source srcset="/assets/img/soil-fixes.avif" type="image/avif">
+              <img src="/assets/img/soil-fixes.avif" alt="Remediação e tratamento de solo contaminado" class="h-72 w-full rounded-md object-cover" loading="lazy" decoding="async">
+            </picture>
+          </a>
+
+          <a href="/servicos/conformidade-regulacao/" class="action-card group">
+            <div class="mb-4 flex items-start justify-between gap-3">
+              <h3 class="text-xl font-semibold leading-tight text-slate-900">Conformidade e Regulação</h3>
+              <i data-lucide="arrow-up-right" class="action-card-icon" aria-hidden="true"></i>
+            </div>
+            <p class="mb-4 text-sm leading-6 text-slate-600">Navegamos os processos da APA, CCDR e Câmaras Municipais. Licenciamento, AIA, monitorização e toda a documentação regulatória para o seu projeto avançar.</p>
+            <picture class="block">
+              <source srcset="/assets/img/conformidade.avif" type="image/avif">
+              <img src="/assets/img/conformidade.avif" alt="Conformidade e regulação ambiental para obras" class="h-72 w-full rounded-md object-cover" loading="lazy" decoding="async">
+            </picture>
+          </a>
+
+          <a href="/servicos/manutencao-postos/" class="action-card group">
+            <div class="mb-4 flex items-start justify-between gap-3">
+              <h3 class="text-xl font-semibold leading-tight text-slate-900">Manutenção de Postos</h3>
+              <i data-lucide="arrow-up-right" class="action-card-icon" aria-hidden="true"></i>
+            </div>
+            <p class="mb-4 text-sm leading-6 text-slate-600">Inspeção preventiva, verificação de infraestruturas críticas e controlo técnico contínuo para reduzir falhas e não conformidades.</p>
+            <picture class="block">
+              <source srcset="/assets/img/gas-station-mom.avif" type="image/avif">
+              <img src="/assets/img/gas-station-mom.avif" alt="Manutenção técnica em posto de combustível" class="h-72 w-full rounded-md object-cover" loading="lazy" decoding="async">
+            </picture>
+          </a>
         </div>
       </div>
     </section>
@@ -286,8 +319,8 @@ activeNav: home
         <div class="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
           <a href="/setores/construcao/" class="action-card group overflow-hidden">
             <picture class="block">
-              <source srcset="/assets/img/setor-construcao.avif" type="image/avif">
-              <img src="/assets/img/setor-construcao.jpg" alt="Escavação em obra de construção" class="h-64 w-full rounded-md object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async">
+              <source srcset="/assets/img/construction.avif" type="image/avif">
+              <img src="/assets/img/construction.avif" alt="Escavação em obra de construção" class="h-64 w-full rounded-md object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async">
             </picture>
             <div class="mt-4 flex items-start justify-between gap-3">
               <h3 class="text-xl font-semibold leading-tight text-slate-900">Construção</h3>
@@ -298,8 +331,8 @@ activeNav: home
 
           <a href="/setores/industria/" class="action-card group overflow-hidden">
             <picture class="block">
-              <source srcset="/assets/img/setor-industria.avif" type="image/avif">
-              <img src="/assets/img/setor-industria.jpg" alt="Zona industrial para reabilitação ambiental" class="h-64 w-full rounded-md object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async">
+              <source srcset="/assets/img/industry.avif" type="image/avif">
+              <img src="/assets/img/industry.avif" alt="Zona industrial para reabilitação ambiental" class="h-64 w-full rounded-md object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async">
             </picture>
             <div class="mt-4 flex items-start justify-between gap-3">
               <h3 class="text-xl font-semibold leading-tight text-slate-900">Indústria</h3>
@@ -310,8 +343,8 @@ activeNav: home
 
           <a href="/setores/postos-de-combustivel/" class="action-card group overflow-hidden">
             <picture class="block">
-              <source srcset="/assets/img/setor-postos.avif" type="image/avif">
-              <img src="/assets/img/setor-postos.jpg" alt="Posto de combustível com tanques subterrâneos" class="h-64 w-full rounded-md object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async">
+              <source srcset="/assets/img/gas-station-pump.avif" type="image/avif">
+              <img src="/assets/img/gas-station-pump.avif" alt="Posto de combustível com tanques subterrâneos" class="h-64 w-full rounded-md object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async">
             </picture>
             <div class="mt-4 flex items-start justify-between gap-3">
               <h3 class="text-xl font-semibold leading-tight text-slate-900">Postos de Combustível</h3>
@@ -322,8 +355,8 @@ activeNav: home
 
           <a href="/setores/municipal/" class="action-card group overflow-hidden">
             <picture class="block">
-              <source srcset="/assets/img/setor-municipal.avif" type="image/avif">
-              <img src="/assets/img/setor-municipal.jpg" alt="Paisagem urbana e planeamento municipal" class="h-64 w-full rounded-md object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async">
+              <source srcset="/assets/img/municipal.avif" type="image/avif">
+              <img src="/assets/img/municipal.avif" alt="Paisagem urbana e planeamento municipal" class="h-64 w-full rounded-md object-cover transition duration-300 group-hover:scale-[1.02]" loading="lazy" decoding="async">
             </picture>
             <div class="mt-4 flex items-start justify-between gap-3">
               <h3 class="text-xl font-semibold leading-tight text-slate-900">Municipal</h3>
@@ -376,16 +409,16 @@ activeNav: home
           <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/galp.svg" alt="Galp" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
           <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/repsol.svg" alt="Repsol" class="max-h-10 w-auto" loading="lazy" decoding="async"></div>
           <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/bp-new.svg" alt="BP" class="logo-bp-tile w-auto" loading="lazy" decoding="async"></div>
-          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/prio.png" alt="PRIO" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/prio.avif" alt="PRIO" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
           <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/moeve.svg" alt="Moeve" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
-          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/gaspe.jpg" alt="Gaspe" class="max-h-11 w-auto" loading="lazy" decoding="async"></div>
-          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/tfuel.png" alt="Tfuel" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
-          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/eco-oil.png" alt="Eco-Oil" class="max-h-10 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/gaspe.avif" alt="Gaspe" class="max-h-11 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/tfuel.avif" alt="Tfuel" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/eco-oil.avif" alt="Eco-Oil" class="max-h-10 w-auto" loading="lazy" decoding="async"></div>
           <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/auchan.svg" alt="Auchan" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
           <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/intermarche.svg" alt="Intermarché" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
           <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/e-leclerc.svg" alt="E.Leclerc" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
           <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/mota-engil.svg" alt="Mota-Engil" class="max-h-9 w-auto" loading="lazy" decoding="async"></div>
-          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/teixeira-duarte.png" alt="Teixeira Duarte" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
+          <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/teixeira-duarte.avif" alt="Teixeira Duarte" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
           <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/casais.svg" alt="Casais" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
           <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/efacec.svg" alt="Efacec" class="max-h-8 w-auto" loading="lazy" decoding="async"></div>
           <div class="flex h-24 items-center justify-center rounded-md border border-slate-200 bg-white px-4"><img src="/assets/img/logos/infraestruturas-portugal.svg" alt="Infraestruturas de Portugal" class="max-h-7 w-auto" loading="lazy" decoding="async"></div>
@@ -396,47 +429,20 @@ activeNav: home
     <section id="emergencia" class="border-b border-slate-200 bg-white">
       <div class="mx-auto max-w-7xl px-6 py-16 md:py-20">
         <div class="relative overflow-hidden rounded-md border border-slate-200 text-white">
-          <img src="/assets/img/history-field.avif" alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover">
-          <div class="absolute inset-0 bg-[linear-gradient(98deg,rgba(2,6,23,0.88)_0%,rgba(11,59,46,0.83)_46%,rgba(11,59,46,0.66)_100%)]"></div>
-          <div class="relative px-8 py-12 md:px-10 md:py-14 lg:px-12 lg:py-16">
+          <img src="/assets/img/lego-2.avif" alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-cover" style="object-position: 75% center;" loading="lazy" decoding="async">
+          <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(3, 12, 10, 0.92) 0%, rgba(7, 30, 24, 0.88) 34%, rgba(11, 59, 46, 0.62) 58%, rgba(11, 59, 46, 0.18) 100%);" aria-hidden="true"></div>
+          <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0.34) 0%, rgba(0, 0, 0, 0.46) 100%);" aria-hidden="true"></div>
+          <div class="relative max-w-4xl px-8 py-12 md:px-10 md:py-14 lg:px-12 lg:py-16">
             <p class="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-100">Resposta de Emergência</p>
             <h2 class="mt-3 max-w-4xl text-3xl font-semibold tracking-tight md:text-5xl">A sua obra parou por contaminação?</h2>
             <p class="mt-4 max-w-3xl text-base leading-8 text-emerald-50 md:text-[1.2rem] md:leading-[1.45]">Cada dia custa milhares de euros. Mobilizamos em 24h, avaliamos, resolvemos e tratamos da APA.</p>
-            <div class="mt-8 flex flex-wrap gap-3">
-              <a href="tel:+351214602288" class="btn btn-inverse btn-md md:text-base">Resposta de Emergência: +351 214 602 288</a>
+            <div class="btn-group-responsive mt-8">
+              <a href="tel:+351214602288" class="btn btn-inverse btn-md md:text-base">Resposta de Emergência</a>
               <a href="/contacto/?servico=remediacao" class="btn btn-outline-light btn-md md:text-base">Pedir Contacto Técnico</a>
             </div>
             <p class="mt-5 text-xs font-medium uppercase tracking-[0.14em] text-emerald-100/95">Mobilização em 24h • Acompanhamento APA • Equipa técnica sénior</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="casos" class="border-y border-slate-200 bg-white">
-      <div class="mx-auto max-w-7xl px-6 py-16 md:py-20">
-        <div class="max-w-4xl">
-          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#0B3B2E]">Case Study</p>
-          <h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-900 md:text-5xl">Caso Real: Reabilitação de Terreno em Posto de Combustível</h2>
-          <p class="mt-4 text-base leading-8 text-slate-600 md:text-[1.75rem] md:leading-[1.35]">Diagnóstico inicial, plano de remediação e regularização junto da APA com impacto direto no prazo da obra.</p>
-        </div>
-
-        <article class="mt-10 grid gap-6 rounded-md border border-slate-200 bg-[#f8f9fc] p-6 md:p-8 lg:grid-cols-2 lg:items-center">
-          <div class="space-y-4">
-            <p class="inline-flex rounded-full border border-[#0B3B2E]/20 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#0B3B2E]">Postos de Combustível</p>
-            <h3 class="text-2xl font-semibold tracking-tight text-slate-900">Contaminação por hidrocarbonetos detetada durante escavação</h3>
-            <p class="text-sm leading-7 text-slate-700">A obra ficou condicionada após deteção de contaminação no solo. A equipa Hígidus definiu rapidamente o plano de amostragem, modelou o risco e implementou estratégia de remediação em fases para manter o cronograma.</p>
-            <ul class="space-y-2 text-sm text-slate-700">
-              <li><strong>Desafio:</strong> obra parada, risco regulatório e pressão de prazo.</li>
-              <li><strong>Abordagem:</strong> avaliação em campo, remediação técnica e dossiê regulatório completo.</li>
-              <li><strong>Resultado:</strong> reposição do avanço da obra com conformidade documental.</li>
-            </ul>
-            <a href="/projetos/" class="btn btn-primary btn-md">Ver Estudo Completo <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i></a>
-          </div>
-          <picture class="block">
-            <source srcset="/assets/img/case-study.avif" type="image/avif">
-            <img src="/assets/img/case-study.jpg" alt="Intervenção de remediação em caso real" class="h-72 w-full rounded-md border border-slate-200 object-cover md:h-80" loading="lazy" decoding="async">
-          </picture>
-        </article>
       </div>
     </section>
 

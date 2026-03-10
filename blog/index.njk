@@ -8,7 +8,7 @@ activeNav: blog
   {% set pageTitle = "Blog | Hígidus" %}
   {% set pageDescription = "Artigos técnicos sobre avaliação de solos, remediação ambiental e conformidade regulatória em Portugal." %}
   {% set pageUrl = "/blog/" | absoluteUrl(siteUrl) %}
-  {% set pageImage = "/assets/img/hero-about.jpg" | absoluteUrl(siteUrl) %}
+  {% set pageImage = "/assets/img/hero-about.avif" | absoluteUrl(siteUrl) %}
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -85,7 +85,7 @@ activeNav: blog
             <p class="blog-eyebrow">Blog Hígidus</p>
             <h1 class="mt-3 max-w-4xl text-4xl font-semibold leading-tight tracking-tight text-slate-900 md:text-6xl">Conteúdo técnico claro para decisões rápidas em campo.</h1>
             <p class="mt-5 max-w-3xl text-base leading-8 text-slate-600 md:text-[1.1rem]">Guias práticos sobre avaliação de solos, remediação e conformidade regulatória. Estruturado para quem precisa decidir sem perder tempo.</p>
-            <div class="mt-8 flex flex-wrap gap-3">
+            <div class="btn-group-responsive mt-8">
               {% if latest %}
               <a href="{{ latest.url }}" class="btn btn-primary btn-md">Ler Último Artigo</a>
               {% endif %}
@@ -99,7 +99,7 @@ activeNav: blog
               <article class="blog-stripe-feature-card relative overflow-hidden rounded-md border border-white/90 bg-white/90 shadow-[0_22px_44px_rgba(15,23,42,0.16)] backdrop-blur-sm">
                 <div class="absolute right-4 top-4 rounded-full border border-slate-200 bg-white/95 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0B3B2E]">Novo</div>
                 <a href="{{ latest.url }}" class="block overflow-hidden">
-                  <img src="{{ latest.data.coverImage or '/assets/img/hero-about.jpg' }}" alt="{{ latest.data.title }}" class="h-64 w-full object-cover transition duration-300 hover:scale-[1.02]" loading="lazy" decoding="async">
+                  <img src="{{ latest.data.coverImage or '/assets/img/hero-about.avif' }}" alt="{{ latest.data.title }}" class="h-64 w-full object-cover transition duration-300 hover:scale-[1.02]" loading="lazy" decoding="async">
                 </a>
                 <div class="p-5">
                   <p class="blog-eyebrow">{{ latest.date | readableDate }}</p>
@@ -137,7 +137,7 @@ activeNav: blog
           {% for post in posts %}
           <article class="group flex h-full flex-col overflow-hidden rounded-md border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:border-[#0B3B2E]/55 hover:shadow-[0_16px_34px_rgba(15,23,42,0.08)]">
             <a href="{{ post.url }}" class="block overflow-hidden">
-              <img src="{{ post.data.coverImage or '/assets/img/hero-about.jpg' }}" alt="{{ post.data.title }}" class="h-52 w-full object-cover transition duration-300 group-hover:scale-[1.03]" loading="lazy" decoding="async">
+              <img src="{{ post.data.coverImage or '/assets/img/hero-about.avif' }}" alt="{{ post.data.title }}" class="h-52 w-full object-cover transition duration-300 group-hover:scale-[1.03]" loading="lazy" decoding="async">
             </a>
             <div class="flex grow flex-col p-6">
               <p class="blog-eyebrow">{{ post.date | readableDate }}</p>

@@ -33,6 +33,10 @@
     @apply bg-[#0B3B2E] text-white hover:bg-[#0d4c3a] ring-offset-white;
   }
 
+  .btn-emergency {
+    @apply bg-[#b91c1c] text-white hover:bg-[#991b1b] ring-offset-white;
+  }
+
   .btn-secondary {
     @apply border border-slate-300 bg-white text-slate-800 hover:bg-slate-100 ring-offset-white;
   }
@@ -178,6 +182,22 @@ h6 {
   background: rgba(255, 255, 255, 0.92);
 }
 
+.site-header [data-header-contact].btn-emergency,
+.site-header:not(.is-scrolled) [data-header-contact].btn-emergency,
+.site-header:not(.is-scrolled) [data-header-contact].btn-emergency:hover,
+.site-header:not(.is-scrolled) [data-header-contact].btn-emergency:focus-visible {
+  background: #b91c1c;
+  color: #fff;
+  border-color: #b91c1c;
+}
+
+.site-header [data-header-contact].btn-emergency:hover,
+.site-header [data-header-contact].btn-emergency:focus-visible {
+  background: #991b1b;
+  border-color: #991b1b;
+  color: #fff;
+}
+
 .site-header:not(.is-scrolled) [data-header-menu-button] {
   border-color: rgba(255, 255, 255, 0.48);
   background: rgba(255, 255, 255, 0.1);
@@ -188,10 +208,6 @@ h6 {
 .site-header:not(.is-scrolled) [data-header-menu-button]:focus-visible {
   background: rgba(255, 255, 255, 0.18);
   border-color: rgba(255, 255, 255, 0.62);
-}
-
-.site-header a[href^="tel:"] {
-  display: none !important;
 }
 
 .site-header:not(.is-scrolled) + main #hero-sectors-bar {
@@ -354,6 +370,46 @@ h6 {
 .action-card:hover::before,
 .action-card:focus-visible::before {
   transform: scaleX(1);
+}
+
+#service-card-grid > .action-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#service-card-grid > .action-card picture {
+  margin-top: auto;
+}
+
+.btn-group-responsive {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+@media (max-width: 639px) {
+  .btn:not(.btn-icon-md):not(.btn-filter):not([data-header-menu-button]) {
+    display: flex;
+    width: min(100%, 20rem);
+    max-width: 20rem;
+    justify-content: center;
+  }
+
+  .btn-group-responsive {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: min(100%, 20rem);
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-group-responsive > .btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .nav-top-link {

@@ -3,7 +3,7 @@ title: "Remediação de Hidrocarbonetos em Postos de Combustível: As 4 Fases de
 description: "Derrames não declarados em postos custam €150 000–€500 000 em remediação. Veja como as 4 fases do processo APA reduzem custo, prazo e exposição regulatória."
 date: 2026-03-04
 author: "Equipa Hígidus"
-coverImage: "/assets/img/setor-postos.jpg"
+coverImage: "/assets/img/gas-station-pump.avif"
 topics:
   - "Remediação"
   - "Postos de Combustível"

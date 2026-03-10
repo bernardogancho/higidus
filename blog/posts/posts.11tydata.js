@@ -8,7 +8,7 @@ module.exports = {
   eleventyComputed: {
     seoTitle: (data) => `${data.title || "Artigo"} | Blog Hígidus`,
     description: (data) => data.description || "Insights técnicos sobre solos contaminados, remediação e conformidade ambiental.",
-    coverImage: (data) => data.coverImage || "/assets/img/hero-about.jpg",
+    coverImage: (data) => data.coverImage || "/assets/img/hero-about.avif",
     dateModified: (data) => data.updated || data.date,
   },
 };

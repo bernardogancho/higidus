@@ -3,7 +3,7 @@ title: "Avaliação de Solos em Obra Urbana: Como Evitar Paragens e Custos Extra
 description: "Em obras urbanas, a contaminação inesperada de solos pode adicionar 20-30% ao orçamento. Saiba como a avaliação prévia protege prazo, custo e conformidade legal."
 date: 2026-03-01
 author: "Equipa Hígidus"
-coverImage: "/assets/img/setor-construcao.jpg"
+coverImage: "/assets/img/construction.avif"
 topics:
   - "Avaliação"
   - "Construção"

@@ -417,6 +417,7 @@
         avaliacao: "Avaliação",
         remediacao: "Remediação",
         conformidade: "Conformidade",
+        manutencao: "Manutenção de Postos",
         postos: "Postos",
       },
       service

@@ -4,7 +4,7 @@ description: "A nova Diretiva UE 2025/2360 entrou em vigor em 16/12/2025. Com ma
 date: 2026-03-04
 updated: 2026-03-04
 author: "Equipa Hígidus"
-coverImage: "/assets/img/setor-industria.jpg"
+coverImage: "/assets/img/industry.avif"
 topics:
   - "Conformidade"
   - "Regulação"
